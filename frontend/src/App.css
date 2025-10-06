@@ -70,7 +70,7 @@ section h2,
   .container { max-width: 420px; }
 }
 
-/* === RESPONSIVE GRID === */
+/* Grid System */
 .grid {
   display: grid;
   gap: 24px;
