@@ -16,14 +16,14 @@ const SolutionPage = () => {
   if (!solution) {
     return (
       <div>
-        <Header language={language} />
-        <div className="section section-light">
+        <Header />
+        <div className="section">
           <div className="container text-center">
             <h1 className="section-title">Solution Not Found</h1>
-            <Link to={`/${language}`} className="btn btn-primary">Back to Home</Link>
+            <a href={`/${language}`} className="btn btn-primary">Back to Home</a>
           </div>
         </div>
-        <Footer language={language} />
+        <Footer />
       </div>
     );
   }
