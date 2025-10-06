@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import './App.css';
 import LandingPage from './pages/LandingPage';
 import ThankYouPage from './pages/ThankYouPage';
+import SolutionPage from './pages/SolutionPage';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
             <Route path="/fr" element={<LandingPage language="fr" />} />
             <Route path="/en/thank-you" element={<ThankYouPage language="en" />} />
             <Route path="/fr/thank-you" element={<ThankYouPage language="fr" />} />
+            
+            {/* Solution Pages */}
+            <Route path="/en/solutions/:solutionId" element={<SolutionPage language="en" />} />
+            <Route path="/fr/solutions/:solutionId" element={<SolutionPage language="fr" />} />
           </Routes>
         </LanguageProvider>
       </Router>
