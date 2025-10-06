@@ -75,7 +75,7 @@ const CustomerFeedback = ({ language }) => {
                   className="w-full flex-shrink-0" 
                   style={{ minWidth: 'calc(100% - 24px)', marginRight: '24px' }}
                 >
-                  <Card className="bg-e2-white border-none shadow-soft mx-auto max-w-2xl rounded-xl overflow-hidden hover:shadow-elevated transition-all duration-300">
+                  <Card className="card bg-e2-white border-none shadow-soft mx-auto max-w-2xl rounded-xl overflow-hidden hover:shadow-elevated transition-all duration-300">
                     <CardContent className="p-8 text-center">
                       
                       {/* Location Badge */}
