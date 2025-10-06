@@ -117,11 +117,12 @@ section h2,
   flex: 0 0 300px;
 }
 
-/* === DARK SECTIONS === */
+/* Dark Sections (Compliance & Integrators) */
 #compliance,
 #integrators {
-  background: #2d4a8f !important;
-  color: #fff !important;
+  background: var(--e2-blue);
+  color: var(--e2-white);
+  padding: 4rem 0;
 }
 
 #compliance h2,
@@ -130,7 +131,26 @@ section h2,
 #integrators p,
 #compliance li,
 #integrators li {
-  color: #fff !important;
+  color: var(--e2-white);
+}
+
+#compliance ul {
+  list-style: none;
+  padding: 0;
+}
+
+#compliance li {
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+#compliance li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--e2-coral);
+  font-weight: bold;
 }
 
 /* === TYPOGRAPHY === */
