@@ -34,11 +34,11 @@ const ProductPillars = ({ language }) => {
           {t.pillars.items.map((pillar, index) => {
             const IconComponent = pillarIcons[index];
             const accentColors = [
-              'bg-coral/10 text-coral',
-              'bg-deep-blue/10 text-deep-blue', 
-              'bg-coral/15 text-coral',
-              'bg-deep-blue/15 text-deep-blue',
-              'bg-coral/20 text-coral'
+              'bg-e2-coral/10 text-e2-coral',
+              'bg-e2-blue/10 text-e2-blue', 
+              'bg-e2-coral/15 text-e2-coral',
+              'bg-e2-blue/15 text-e2-blue',
+              'bg-e2-coral/20 text-e2-coral'
             ];
             
             return (
