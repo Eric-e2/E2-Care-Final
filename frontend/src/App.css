@@ -50,7 +50,7 @@ section h2,
   line-height: 1.5;
 }
 
-/* === RESPONSIVE CONTAINER === */
+/* Container System */
 .container {
   width: 100%;
   max-width: 1160px;
@@ -59,21 +59,15 @@ section h2,
 }
 
 @media (max-width: 1024px) {
-  .container {
-    max-width: 900px;
-  }
+  .container { max-width: 900px; }
 }
 
 @media (max-width: 768px) {
-  .container {
-    max-width: 680px;
-  }
+  .container { max-width: 680px; }
 }
 
 @media (max-width: 480px) {
-  .container {
-    max-width: 420px;
-  }
+  .container { max-width: 420px; }
 }
 
 /* === RESPONSIVE GRID === */
