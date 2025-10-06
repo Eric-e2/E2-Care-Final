@@ -1,11 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { content } from '../data/content';
+import React, { useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const ThankYouPage = ({ language }) => {
-  const t = content[language];
+const ThankYouPage = () => {
+  const { language } = useLanguage();
   
   const handlePdfDownload = () => {
     const pdfName = language === 'en' ? 'E2-Care_1pager_EN.pdf' : 'E2-Care_1pager_FR.pdf';
