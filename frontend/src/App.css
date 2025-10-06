@@ -1,18 +1,18 @@
-/* E2-Care Design System */
+/* E2-Care Design System - Final Version */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* Foundation Colors */
+/* Foundation Colors - STRICT PALETTE */
 :root {
-  /* E2-Care Brand Colors - Updated */
-  --e2-coral: #f45053;
-  --e2-blue: #2d4a8f;
-  --e2-light: #f5f6f8;
-  --e2-dark: #1a1a1a;
-  --e2-white: #ffffff;
+  /* PRIMARY COLORS - No exceptions allowed */
+  --e2-coral: #f45053;        /* Accent for buttons/icons ONLY */
+  --e2-blue: #2d4a8f;         /* Primary dark sections with white text */
+  --e2-light: #f5f6f8;        /* Light backgrounds */
+  --e2-dark: #1a1a1a;         /* Secondary text color */
+  --e2-white: #ffffff;        /* Main backgrounds */
   
-  /* Backward compatibility */
+  /* Backward compatibility aliases */
   --coral: #f45053;
   --deep-blue: #2d4a8f;
   --light-grey: #f5f6f8;
