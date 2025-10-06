@@ -35,7 +35,7 @@ const Header = ({ language }) => {
   ];
   
   return (
-    <header className="header-nav">
+    <header className="header header-nav">
       <div className="container flex items-center justify-between">
         
         {/* Logo - Official E2 SVG */}
