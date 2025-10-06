@@ -1,31 +1,27 @@
 import React from 'react';
 import Header from '../components/Header';
-import HeroSection from '../components/HeroSection';
-import ProductPillars from '../components/ProductPillars';
+import Hero from '../components/Hero';
+import Solutions from '../components/Solutions';
 import HowItWorks from '../components/HowItWorks';
-import ComplianceSection from '../components/ComplianceSection';
-import CustomerFeedback from '../components/CustomerFeedback';
-import IntegratorsSection from '../components/IntegratorsSection';
+import Compliance from '../components/Compliance';
+import Stories from '../components/Stories';
+import Integrators from '../components/Integrators';
 import FAQ from '../components/FAQ';
-import ContactSection from '../components/ContactSection';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import { content } from '../data/content';
 
 const LandingPage = ({ language }) => {
-  const t = content[language];
-  
   return (
-    <div className="min-h-screen bg-e2-white">
-      
+    <div>
       <Header language={language} />
-      <HeroSection language={language} />
-      <ProductPillars language={language} />
+      <Hero language={language} />
+      <Solutions language={language} />
       <HowItWorks language={language} />
-      <ComplianceSection language={language} />
-      <CustomerFeedback language={language} />
-      <IntegratorsSection language={language} />
+      <Compliance language={language} />
+      <Stories language={language} />
+      <Integrators language={language} />
       <FAQ language={language} />
-      <ContactSection language={language} />
+      <Contact language={language} />
       <Footer language={language} />
     </div>
   );
