@@ -9,7 +9,7 @@ const ComplianceSection = ({ language }) => {
   const featureIcons = [Shield, Server, FileText, Users, CheckCircle, Lock];
   
   return (
-    <section className="section-padding bg-gradient-to-br from-deep-blue to-deep-blue/90 text-white">
+    <section className="section-padding bg-e2-blue text-white">
       <div className="container">
         
         {/* Section Header */}
