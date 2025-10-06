@@ -13,10 +13,9 @@ const HowItWorks = ({ language }) => {
     <section id="how-it-works" className="section how-it-works">
       <div className="container">
         <h2 className="section-title">{t.howItWorks.title}</h2>
-        <div 
-          className="how-description"
-          dangerouslySetInnerHTML={{ __html: formatDescription(t.howItWorks.description) }}
-        />
+        <div className="how-it-works-content">
+          <p dangerouslySetInnerHTML={{ __html: formatDescription(t.howItWorks.description) }} />
+        </div>
       </div>
     </section>
   );
