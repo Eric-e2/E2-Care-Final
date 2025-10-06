@@ -8,8 +8,8 @@ import { LanguageProvider } from './contexts/LanguageContext';
 function App() {
   return (
     <div className="App">
-      <LanguageProvider>
-        <Router>
+      <Router>
+        <LanguageProvider>
           <Routes>
             <Route path="/" element={<Navigate to="/en" replace />} />
             <Route path="/en" element={<LandingPage language="en" />} />
@@ -17,8 +17,8 @@ function App() {
             <Route path="/en/thank-you" element={<ThankYouPage language="en" />} />
             <Route path="/fr/thank-you" element={<ThankYouPage language="fr" />} />
           </Routes>
-        </Router>
-      </LanguageProvider>
+        </LanguageProvider>
+      </Router>
     </div>
   );
 }
