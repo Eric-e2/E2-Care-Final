@@ -16,7 +16,7 @@ const ProductPillars = ({ language }) => {
   ];
   
   return (
-    <section className="section-padding bg-section">
+    <section id="solutions" className="section-padding bg-e2-light">
       <div className="container">
         
         {/* Section Header */}
