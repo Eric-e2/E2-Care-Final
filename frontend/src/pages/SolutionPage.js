@@ -1,11 +1,16 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 import { solutionsContent } from '../data/solutions';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-const SolutionPage = ({ language }) => {
-  const { solutionId } = useParams();
+const SolutionPage = () => {
+  const { language } = useLanguage();
+  const location = useLocation();
+  
+  // Extract solution ID from path
+  const solutionId = location.pathname.split('/').pop();
   const solution = solutionsContent[language]?.[solutionId];
   
   if (!solution) {
