@@ -27,27 +27,23 @@ const Footer = () => {
           
         </div>
         
-        <div className="footer-bottom">
-          <p style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
-            © 2025 E2 Technologies OÜ. {language === 'en' ? 'All rights reserved.' : 'Tous droits réservés.'}
-          </p>
-          
-          {/* Language Toggle in Footer */}
-          <div className="lang-toggle">
-            <button 
-              className={`lang-btn ${language === 'en' ? 'active' : ''}`}
-              onClick={() => setLanguage('en')}
-            >
-              EN
-            </button>
-            <button 
-              className={`lang-btn ${language === 'fr' ? 'active' : ''}`}
-              onClick={() => setLanguage('fr')}
-            >
-              FR
-            </button>
+          <div className="footer-language">
+            <div className="language-toggle">
+              <span 
+                className={`lang-badge ${language === 'en' ? 'active' : ''}`}
+                onClick={() => handleLanguageClick('en')}
+              >
+                EN
+              </span>
+              <span>/</span>
+              <span 
+                className={`lang-badge ${language === 'fr' ? 'active' : ''}`}
+                onClick={() => handleLanguageClick('fr')}
+              >
+                FR
+              </span>
+            </div>
           </div>
-        </div>
       </div>
     </footer>
   );
