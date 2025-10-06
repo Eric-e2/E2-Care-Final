@@ -46,12 +46,6 @@ const Footer = ({ language }) => {
             <p>
               <a href="#integrators" className="footer-link">{t.footer.integrators}</a>
             </p>
-            <p style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '0.875rem', marginTop: '1rem' }}>
-              {language === 'en' 
-                ? 'Join our partner network for regional deployment opportunities'
-                : 'Rejoignez notre réseau de partenaires pour les opportunités de déploiement régional'
-              }
-            </p>
           </div>
           
         </div>

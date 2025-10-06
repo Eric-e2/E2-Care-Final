@@ -13,7 +13,7 @@ const SolutionPage = ({ language }) => {
       <div>
         <Header language={language} />
         <div className="section section-light">
-          <div className="container" style={{ textAlign: 'center' }}>
+          <div className="container text-center">
             <h1 className="section-title">Solution Not Found</h1>
             <Link to={`/${language}`} className="btn btn-primary">Back to Home</Link>
           </div>
@@ -49,11 +49,16 @@ const SolutionPage = ({ language }) => {
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             
-            <h1 className="hero-title">{solution.title}</h1>
+            <h1 className="hero-title" style={{ marginBottom: '3rem' }}>{solution.title}</h1>
             
             {/* Problem */}
-            <div className="card" style={{ marginBottom: '2rem' }}>
-              <h2 className="section-title" style={{ color: 'var(--e2-coral)', fontSize: '2rem' }}>
+            <div className="card mb-4">
+              <h2 className="section-title" style={{ 
+                color: 'var(--e2-coral)', 
+                fontSize: '2rem',
+                textAlign: 'left',
+                marginBottom: '1rem'
+              }}>
                 {language === 'en' ? 'Problem' : 'Problème'}
               </h2>
               <p className="card-text" style={{ fontSize: '1.125rem', lineHeight: '1.6' }}>
@@ -62,8 +67,13 @@ const SolutionPage = ({ language }) => {
             </div>
             
             {/* Solution */}
-            <div className="card" style={{ marginBottom: '2rem' }}>
-              <h2 className="section-title" style={{ color: 'var(--e2-blue)', fontSize: '2rem' }}>
+            <div className="card mb-4">
+              <h2 className="section-title" style={{ 
+                color: 'var(--e2-blue)', 
+                fontSize: '2rem',
+                textAlign: 'left',
+                marginBottom: '1rem'
+              }}>
                 {language === 'en' ? 'Solution' : 'Solution'}
               </h2>
               <p className="card-text" style={{ fontSize: '1.125rem', lineHeight: '1.6' }}>
@@ -72,8 +82,13 @@ const SolutionPage = ({ language }) => {
             </div>
             
             {/* Benefits & ROI */}
-            <div className="card" style={{ marginBottom: '2rem' }}>
-              <h2 className="section-title" style={{ color: 'var(--e2-coral)', fontSize: '2rem' }}>
+            <div className="card mb-4">
+              <h2 className="section-title" style={{ 
+                color: 'var(--e2-coral)', 
+                fontSize: '2rem',
+                textAlign: 'left',
+                marginBottom: '1rem'
+              }}>
                 {language === 'en' ? 'Benefits & ROI' : 'Bénéfices & ROI'}
               </h2>
               <div style={{ display: 'grid', gap: '1rem' }}>
@@ -94,18 +109,27 @@ const SolutionPage = ({ language }) => {
             </div>
             
             {/* Mini Case */}
-            <div className="card" style={{ background: 'var(--e2-light)', marginBottom: '3rem' }}>
-              <h2 className="section-title" style={{ color: 'var(--e2-blue)', fontSize: '2rem' }}>
+            <div className="card mb-4" style={{ background: 'var(--e2-light)' }}>
+              <h2 className="section-title" style={{ 
+                color: 'var(--e2-blue)', 
+                fontSize: '2rem',
+                textAlign: 'left',
+                marginBottom: '1rem'
+              }}>
                 {language === 'en' ? 'Success Story' : 'Cas de Succès'}
               </h2>
-              <p className="card-text" style={{ fontSize: '1.125rem', lineHeight: '1.6', fontStyle: 'italic' }}>
+              <p className="card-text" style={{ 
+                fontSize: '1.125rem', 
+                lineHeight: '1.6', 
+                fontStyle: 'italic' 
+              }}>
                 {solution.miniCase}
               </p>
             </div>
             
             {/* CTAs */}
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
+            <div className="text-center">
+              <div className="hero-buttons mb-2">
                 <Link to={`/${language}/thank-you`} className="btn btn-primary">
                   {solution.cta}
                 </Link>
@@ -128,17 +152,17 @@ const SolutionPage = ({ language }) => {
       
       {/* Final CTA Band */}
       <section className="section section-blue">
-        <div className="container" style={{ textAlign: 'center' }}>
+        <div className="container text-center">
           <h2 className="section-title">
             {language === 'en' ? 'Start Your Pilot Today' : 'Lancez Votre Pilote Aujourd\'hui'}
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle" style={{ color: 'white !important' }}>
             {language === 'en'
               ? 'Join hundreds of organizations already using E2-Care to improve safety and efficiency.'
               : 'Rejoignez des centaines d\'organisations utilisant déjà E2-Care pour améliorer sécurité et efficacité.'
             }
           </p>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <div className="hero-buttons">
             <Link to={`/${language}/thank-you`} className="btn btn-primary">
               {language === 'en' ? 'Start a Pilot' : 'Lancer un Pilote'}
             </Link>

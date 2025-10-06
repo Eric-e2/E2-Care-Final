@@ -56,6 +56,20 @@ export const solutionsContent = {
       miniCase: 'Hospital: 30% faster asset retrieval; avoided purchase of 8 extra pumps.',
       cta: 'See How It Works'
     },
+    'smart-devices': {
+      title: 'Smart Devices for Seniors',
+      problem: 'Seniors forget medication; asking for help is hard; language barriers exist.',
+      solution: 'Connected watches, smart pill dispensers, and voice-AI in multiple languages (EN/FR/LV/LT/DE/RU) for reminders and help.',
+      benefits: [
+        'Better adherence to medication',
+        'Instant help requests',
+        'Comfort for families; fast ROI',
+        'Multilingual voice support',
+        'Emergency response integration'
+      ],
+      miniCase: 'FR flats: voice-AI reminders improved adherence; families report higher peace of mind.',
+      cta: 'Book a Demo'
+    },
     'integrators': {
       title: 'E2-Integrators & Local Partners',
       problem: 'Healthcare technology adoption varies by region, requiring local expertise, language support, and regulatory knowledge.',
@@ -129,6 +143,20 @@ export const solutionsContent = {
       ],
       miniCase: 'Hôpital : récupération des équipements 30% plus rapide ; achat de 8 pompes évité.',
       cta: 'Voir Comment Ça Marche'
+    },
+    'smart-devices': {
+      title: 'Appareils Connectés pour Seniors',
+      problem: 'Oubli de médicaments ; difficulté à demander de l\'aide ; barrières de langue.',
+      solution: 'Montres connectées, piluliers intelligents et IA vocale multilingue (EN/FR/LV/LT/DE/RU) pour rappels et assistance.',
+      benefits: [
+        'Meilleure observance',
+        'Demandes d\'aide instantanées',
+        'Tranquillité pour les familles ; ROI rapide',
+        'Support vocal multilingue',
+        'Intégration réponse d\'urgence'
+      ],
+      miniCase: 'Appartements FR : rappels vocaux ont amélioré l\'observance ; familles plus sereines.',
+      cta: 'Réserver une Démo'
     },
     'integrators': {
       title: 'E2-Intégrateurs & Partenaires Locaux',

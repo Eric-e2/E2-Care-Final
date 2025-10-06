@@ -23,7 +23,7 @@ const ThankYouPage = ({ language }) => {
       
       <section className="section section-light">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+          <div className="text-center" style={{ maxWidth: '600px', margin: '0 auto' }}>
             
             {/* Success Icon */}
             <div style={{ 
@@ -43,7 +43,7 @@ const ThankYouPage = ({ language }) => {
             <p className="hero-subtitle">{t.thankYou.message}</p>
             
             {/* Action Buttons */}
-            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+            <div className="hero-buttons" style={{ marginBottom: '3rem' }}>
               <button onClick={handleTidyCalOpen} className="btn btn-primary">
                 {t.thankYou.bookDemo}
               </button>
@@ -53,7 +53,7 @@ const ThankYouPage = ({ language }) => {
             </div>
             
             {/* TidyCal Embed Placeholder */}
-            <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
+            <div className="card" style={{ padding: '3rem' }}>
               <h3 className="card-title">
                 {language === 'en' ? 'Schedule Your Demo' : 'Planifiez Votre Démo'}
               </h3>
