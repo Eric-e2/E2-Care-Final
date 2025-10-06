@@ -25,11 +25,11 @@ const ThankYouPage = () => {
   
   return (
     <div>
-      <Header language={language} />
+      <Header />
       
-      <section className="section section-light">
+      <section className="section" style={{ background: 'var(--e2-light)' }}>
         <div className="container">
-          <div className="text-center" style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
             
             {/* Success Icon */}
             <div style={{ 
@@ -45,48 +45,54 @@ const ThankYouPage = () => {
               <span style={{ color: 'white', fontSize: '2rem', fontWeight: 'bold' }}>✓</span>
             </div>
             
-            <h1 className="hero-title">{t.thankYou.title}</h1>
-            <p className="hero-subtitle">{t.thankYou.message}</p>
+            <h1 style={{ fontSize: '3rem', fontWeight: '700', marginBottom: '1rem', color: 'var(--e2-dark)' }}>
+              {language === 'en' ? 'Thank You!' : 'Merci !'}
+            </h1>
+            <p style={{ fontSize: '1.25rem', marginBottom: '2rem', color: 'var(--e2-dark)', opacity: 0.8 }}>
+              {language === 'en' 
+                ? 'We\'ll be in touch soon. In the meantime, schedule a demo or download our 1-pager.'
+                : 'Nous vous recontacterons bientôt. En attendant, planifiez une démo ou téléchargez notre 1-pager.'
+              }
+            </p>
             
             {/* Action Buttons */}
-            <div className="hero-buttons" style={{ marginBottom: '3rem' }}>
-              <button onClick={handleTidyCalOpen} className="btn btn-primary">
-                {t.thankYou.bookDemo}
-              </button>
-              <button onClick={handlePdfDownload} className="btn btn-secondary">
-                {t.thankYou.downloadPdf}
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+              <button onClick={handlePdfDownload} className="btn btn-primary">
+                {language === 'en' ? 'Download PDF' : 'Télécharger le PDF'}
               </button>
             </div>
             
-            {/* TidyCal Embed Placeholder */}
-            <div className="card" style={{ padding: '3rem' }}>
-              <h3 className="card-title">
+            {/* TidyCal Embed */}
+            <div style={{ 
+              background: 'var(--e2-white)', 
+              padding: '2rem', 
+              borderRadius: '12px',
+              marginBottom: '2rem',
+              boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+            }}>
+              <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1.5rem', color: 'var(--e2-blue)' }}>
                 {language === 'en' ? 'Schedule Your Demo' : 'Planifiez Votre Démo'}
               </h3>
-              <div style={{ 
-                background: 'var(--e2-light)', 
-                padding: '2rem', 
-                borderRadius: '12px',
-                color: 'var(--e2-dark)'
-              }}>
-                <p>{language === 'en' ? 'TidyCal booking calendar will be embedded here' : 'Le calendrier de réservation TidyCal sera intégré ici'}</p>
-                <p style={{ fontSize: '0.875rem', opacity: 0.7, marginTop: '1rem' }}>
-                  https://tidycal.com/ericbrisset/30-minute-meeting
-                </p>
-              </div>
+              
+              {/* TidyCal Embed */}
+              <div 
+                className="tidycal-embed" 
+                data-path="ericbrisset/30-minute-meeting"
+                style={{ minHeight: '500px' }}
+              />
             </div>
             
             <div style={{ marginTop: '2rem' }}>
-              <Link to={`/${language}`} className="btn btn-secondary">
-                {t.thankYou.backHome}
-              </Link>
+              <a href={`/${language}`} className="btn btn-secondary">
+                {language === 'en' ? '← Back to Home' : '← Retour à l\'Accueil'}
+              </a>
             </div>
             
           </div>
         </div>
       </section>
       
-      <Footer language={language} />
+      <Footer />
     </div>
   );
 };
