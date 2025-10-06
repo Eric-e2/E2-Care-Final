@@ -26,12 +26,12 @@ const Solutions = ({ language }) => {
                 <p className="card-text">{solution.description}</p>
               </div>
               <div className="card-cta">
-                <Link 
-                  to={`/${language}/solutions/${solutionPaths[index]}`}
+                <a 
+                  href={`/${language}/solutions/${solutionPaths[index]}`}
                   className="btn btn-primary"
                 >
                   {solution.cta}
-                </Link>
+                </a>
               </div>
             </div>
           ))}
