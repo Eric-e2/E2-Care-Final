@@ -137,6 +137,21 @@ export const solutionsContent = {
       ],
       miniCase: 'Appartements FR : rappels vocaux ont amélioré l\'observance ; familles plus sereines.',
       cta: 'Réserver une Démo'
+    },
+    'integrators': {
+      title: 'E2-Intégrateurs & Partenaires Locaux',
+      problem: 'L\'adoption de technologie healthcare varie par région, nécessitant expertise locale, support linguistique et connaissance réglementaire.',
+      solution: 'Programme partenaires complet avec solutions marque blanche, formation complète, accès API et modèles de revenus partagés pour déploiement régional.',
+      benefits: [
+        'Dashboard et branding marque blanche',
+        'Formation et certification complètes',
+        'Accès API et support technique',
+        'Modèle revenus partagés (25-50%)',
+        'Propriété clients locaux',
+        'Accès anticipé nouvelles fonctionnalités'
+      ],
+      miniCase: 'Partenaires Baltiques : 3 accords JV signés en 6 mois, générant 200k€+ revenus récurrents avec 40% part partenaire.',
+      cta: 'Rejoindre Programme Partenaires'
     }
   }
 };
