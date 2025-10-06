@@ -79,12 +79,19 @@ const ProductPillars = ({ language }) => {
                   </div>
                   
                   {/* CTA Button */}
-                  <Link to={`/${language}/solutions/${['e2-care', 'e2-temp-humidity', 'e2-supply-chain', 'e2-asset-tracking', 'smart-devices'][index]}`}>
+                  <Link to={
+                    index === 5 
+                      ? `/${language}/solutions/integrators`
+                      : `/${language}/solutions/${['e2-care', 'e2-temp-humidity', 'e2-supply-chain', 'e2-asset-tracking', 'smart-devices'][index]}`
+                  }>
                     <Button 
                       variant="outline" 
                       className="btn-secondary w-full group-hover:bg-e2-dark group-hover:text-white transition-all duration-300"
                     >
-                      {t.pillars.cta}
+                      {index === 5 
+                        ? (language === 'en' ? 'Join the Partner Program' : 'Rejoindre le programme partenaires')
+                        : t.pillars.cta
+                      }
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                     </Button>
                   </Link>
