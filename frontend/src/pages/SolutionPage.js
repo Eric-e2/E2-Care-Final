@@ -50,11 +50,11 @@ const SolutionPage = () => {
       </section>
       
       {/* Solution Content */}
-      <section className="section section-light">
+      <section className="section" style={{ background: 'var(--e2-light)' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             
-            <h1 className="hero-title" style={{ marginBottom: '3rem' }}>{solution.title}</h1>
+            <h1 style={{ fontSize: '3rem', fontWeight: '700', textAlign: 'center', marginBottom: '3rem', color: 'var(--e2-dark)' }}>{solution.title}</h1>
             
             {/* Problem */}
             <div className="card mb-4">
