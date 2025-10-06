@@ -42,7 +42,7 @@ const CustomerFeedback = ({ language }) => {
   };
   
   return (
-    <section id="feedbacks" className="section-padding bg-e2-light">
+    <section id="stories" data-section="stories" className="section-padding bg-e2-light">
       <div className="container">
         
         {/* Section Header */}
