@@ -634,7 +634,62 @@ section h2,
   }
 }
 
+/* Contact Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--e2-light);
+  border-radius: 8px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background: var(--e2-white);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--e2-coral);
+}
+
+.form-input::placeholder {
+  color: rgba(26, 26, 26, 0.6);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* TidyCal Embed Styles */
+.tidycal-embed {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
 /* Reactive Window Resize Support */
 .reactive-layout {
   transition: all 0.3s ease;
+}
+
+/* Additional responsive helpers */
+@media (max-width: 640px) {
+  .form-input {
+    padding: 0.875rem;
+  }
+  
+  .contact-form .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
