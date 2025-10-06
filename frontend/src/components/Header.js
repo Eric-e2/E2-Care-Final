@@ -1,55 +1,60 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
-const Header = ({ language }) => {
-  const { switchLanguage } = useLanguage();
-  const t = content[language];
-  
+const Header = () => {
+  const { language, toggleLanguage, setLanguage } = useLanguage();
+  const t = content[language].header;
+
+  const handleLanguageClick = (lang) => {
+    setLanguage(lang);
+  };
+
+  // E2 SVG Logo
+  const E2Logo = () => (
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="40" height="40" rx="8" fill="#2d4a8f"/>
+      <text x="20" y="26" textAnchor="middle" fill="white" fontSize="16" fontWeight="700" fontFamily="Quicksand">E2</text>
+    </svg>
+  );
+
   return (
     <header className="header">
       <div className="container">
         <div className="header-content">
+          {/* Logo */}
+          <a href={`/${language}`} className="logo">
+            <E2Logo />
+          </a>
           
-          {/* Left: Logo + Language Toggle */}
-          <div className="header-left">
-            {/* Official E2 Logo (SVG only) */}
-            <Link to={`/${language}`} className="logo">
-              <svg width="40" height="40" viewBox="0 0 40 40">
-                <rect width="40" height="40" rx="8" fill="#f45053"/>
-                <text x="20" y="28" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold" fontFamily="Quicksand">E2</text>
-              </svg>
-              E2-Care
-            </Link>
+          <div className="header-right">
+            {/* Navigation Links */}
+            <nav className="nav-links">
+              <a href={`/${language}#solutions`} className="nav-link">{t.nav.solutions}</a>
+              <a href={`/${language}#how-it-works`} className="nav-link">{t.nav.howItWorks}</a>
+              <a href={`/${language}#stories`} className="nav-link">{t.nav.feedbacks}</a>
+              <a href={`/${language}#integrators`} className="nav-link">{t.nav.partners}</a>
+              <a href={`/${language}#faq`} className="nav-link">{t.nav.faq}</a>
+              <a href={`/${language}#contact`} className="nav-link">{t.nav.contact}</a>
+            </nav>
             
-            {/* Language Toggle EN/FR (never GB) */}
-            <div className="lang-toggle">
-              <button 
-                className={`lang-btn ${language === 'en' ? 'active' : ''}`}
-                onClick={() => switchLanguage('en')}
+            {/* Language Toggle - Text Badges (EN / FR) */}
+            <div className="language-toggle">
+              <span 
+                className={`lang-badge ${language === 'en' ? 'active' : ''}`}
+                onClick={() => handleLanguageClick('en')}
               >
                 EN
-              </button>
-              <button 
-                className={`lang-btn ${language === 'fr' ? 'active' : ''}`}
-                onClick={() => switchLanguage('fr')}
+              </span>
+              <span>/</span>
+              <span 
+                className={`lang-badge ${language === 'fr' ? 'active' : ''}`}
+                onClick={() => handleLanguageClick('fr')}
               >
                 FR
-              </button>
+              </span>
             </div>
           </div>
-          
-          {/* Right: Navigation ONLY (NO CTAs) */}
-          <nav className="nav-menu">
-            <a href="#solutions" className="nav-link">{t.nav.solutions}</a>
-            <a href="#how-it-works" className="nav-link">{t.nav.howItWorks}</a>
-            <a href="#stories" className="nav-link">{t.nav.feedbacks}</a>
-            <a href="#integrators" className="nav-link">{t.nav.partners}</a>
-            <a href="#faq" className="nav-link">{t.nav.faq}</a>
-            <a href="#contact" className="nav-link">{t.nav.contact}</a>
-          </nav>
-          
         </div>
       </div>
     </header>
