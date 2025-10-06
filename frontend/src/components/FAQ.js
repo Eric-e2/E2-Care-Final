@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
-const FAQ = ({ language }) => {
-  const t = content[language];
-  const [openItems, setOpenItems] = useState({});
-  
-  const toggleItem = (index) => {
-    setOpenItems(prev => ({
-      ...prev,
-      [index]: !prev[index]
-    }));
+const FAQ = () => {
+  const { language } = useLanguage();
+  const t = content[language].faq;
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
   
   return (
