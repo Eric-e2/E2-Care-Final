@@ -231,21 +231,7 @@ export const content = {
     // How It Works
     howItWorks: {
       title: 'Comment E2-Care Fonctionne',
-      subtitle: 'Processus simple en 3 étapes reliant capteurs aux insights',
-      steps: [
-        {
-          title: 'Capteurs',
-          description: 'Capteurs BLE et calibrés collectent données temps réel'
-        },
-        {
-          title: 'Relais',
-          description: 'Connectivité LTE/NB-IoT/Wi-Fi assure transmission fiable'
-        },
-        {
-          title: 'Dashboard Cloud',
-          description: 'Alertes, rapports et intégration API pour insights actionnables'
-        }
-      ]
+      description: 'Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre couche d\'IA fait le reste : détection de tendances (risques santé), alertes chutes, rappels (prise de pilules) et communication intelligente avec les aidants et la famille.'
     },
     
     // Compliance & Security
