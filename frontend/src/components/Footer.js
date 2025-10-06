@@ -5,6 +5,10 @@ import { content } from '../data/content';
 const Footer = () => {
   const { language, setLanguage } = useLanguage();
   const t = content[language].footer;
+
+  const handleLanguageClick = (lang) => {
+    setLanguage(lang);
+  };
   
   return (
     <footer className="footer">
