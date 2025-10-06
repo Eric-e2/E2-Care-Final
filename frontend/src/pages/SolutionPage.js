@@ -133,22 +133,22 @@ const SolutionPage = () => {
             </div>
             
             {/* CTAs */}
-            <div className="text-center">
-              <div className="hero-buttons mb-2">
-                <Link to={`/${language}/thank-you`} className="btn btn-primary">
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '1rem' }}>
+                <a href={`/${language}/thank-you`} className="btn btn-primary">
                   {solution.cta}
-                </Link>
-                <Link to={`/${language}#contact`} className="btn btn-secondary">
+                </a>
+                <a href={`/${language}#contact`} className="btn btn-secondary">
                   {language === 'en' ? 'Get a Quote' : 'Obtenir un Devis'}
-                </Link>
+                </a>
               </div>
               
-              <Link 
-                to={`/${language}#solutions`}
+              <a 
+                href={`/${language}#solutions`}
                 style={{ color: 'var(--e2-coral)', textDecoration: 'none', fontSize: '1rem' }}
               >
                 ← {language === 'en' ? 'Back to Solutions' : 'Retour aux Solutions'}
-              </Link>
+              </a>
             </div>
             
           </div>
