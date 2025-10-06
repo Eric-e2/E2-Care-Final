@@ -44,6 +44,11 @@ export const content = {
           title: 'Smart Devices for Seniors',
           description: 'Watches, pill dispensers, voice-AI support. Multilingual, emergency-ready with fast ROI.',
           features: ['Multilingual support', 'Emergency response', 'Fast ROI delivery']
+        },
+        {
+          title: 'E2-Integrators & Local Partners',
+          description: 'Deploy E2 solutions in your region with our Partner & JV program. White-label dashboard, API access, training, and shared revenue model.',
+          features: ['White-label dashboard', 'API access & training', 'Shared revenue model']
         }
       ],
       cta: 'Learn More'
