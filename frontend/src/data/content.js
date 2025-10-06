@@ -379,6 +379,38 @@ export const content = {
       integrators: 'Pour Intégrateurs / Partenaires'
     },
     
+    // FAQ
+    faq: {
+      title: 'Foire Aux Questions',
+      subtitle: 'Tout ce que vous devez savoir sur E2-Care',
+      items: [
+        {
+          question: 'Combien de temps prend l\'installation ?',
+          answer: 'La plupart des installations E2-Care sont terminées en moins de 30 minutes. Nos capteurs sont sans fil et alimentés par batterie, ne nécessitant aucun câblage complexe.'
+        },
+        {
+          question: 'Le système est-il conforme RGPD ?',
+          answer: 'Oui, E2-Care est entièrement conforme RGPD avec options d\'hébergement UE, logs audit-ready, accès basé sur les rôles et politiques de rétention sécurisées.'
+        },
+        {
+          question: 'Quelle est l\'autonomie des capteurs ?',
+          answer: 'Nos capteurs durent généralement 2-5 ans selon les patterns d\'usage et conditions environnementales, avec alertes batterie faible envoyées bien en avance.'
+        },
+        {
+          question: 'Les familles peuvent-elles accéder aux données ?',
+          answer: 'Oui, avec consentement approprié, les membres de la famille peuvent recevoir des alertes et voir les rapports via notre dashboard sécurisé ou app mobile.'
+        },
+        {
+          question: 'Proposez-vous des solutions marque blanche ?',
+          answer: 'Oui, nous fournissons des solutions marque blanche complètes pour partenaires et intégrateurs, incluant branding personnalisé, accès API et partage de revenus.'
+        },
+        {
+          question: 'Quelles langues sont supportées ?',
+          answer: 'E2-Care supporte plusieurs langues dont anglais, français, letton, lituanien, allemand et russe pour les interactions vocales et interfaces.'
+        }
+      ]
+    },
+
     // Thank You Page
     thankYou: {
       title: 'Merci !',
