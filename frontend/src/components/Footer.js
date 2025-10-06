@@ -3,7 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
 const Footer = ({ language }) => {
-  const { switchLanguage } = useLanguage();
+  const { setLanguage } = useLanguage();
   const t = content[language];
   
   return (
