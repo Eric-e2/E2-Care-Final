@@ -30,7 +30,9 @@ const Integrators = ({ language }) => {
     <section id="integrators" className="section section-blue">
       <div className="container">
         <h2 className="section-title">{t.integrators.title}</h2>
-        <p className="section-subtitle">{t.integrators.description}</p>
+        <p className="section-subtitle" style={{ color: 'white !important' }}>
+          {t.integrators.description}
+        </p>
         
         {/* Partner Table */}
         <div className="table-container">
@@ -72,17 +74,23 @@ const Integrators = ({ language }) => {
         </div>
         
         {/* CTA Buttons */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', marginTop: '3rem', flexWrap: 'wrap' }}>
-          <Link to={`/${language}/thank-you`} className="btn btn-primary">
-            {t.integrators.bookMeeting}
-          </Link>
-          <Link to={`/${language}/solutions/integrators`} className="btn" style={{
-            background: 'transparent',
-            color: 'white',
-            border: '2px solid white'
-          }}>
-            {t.integrators.applyPartner}
-          </Link>
+        <div className="text-center" style={{ marginTop: '3rem' }}>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to={`/${language}/thank-you`} className="btn btn-primary">
+              {t.integrators.bookMeeting}
+            </Link>
+            <Link 
+              to={`/${language}/solutions/integrators`} 
+              className="btn" 
+              style={{
+                background: 'transparent',
+                color: 'white',
+                border: '2px solid white'
+              }}
+            >
+              {t.integrators.applyPartner}
+            </Link>
+          </div>
         </div>
       </div>
     </section>

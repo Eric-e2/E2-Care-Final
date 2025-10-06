@@ -6,7 +6,7 @@ const Stories = ({ language }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   
-  // Auto-play functionality
+  // Auto-play functionality: 3s, pause on hover
   useEffect(() => {
     if (!isAutoPlaying) return;
     
@@ -19,50 +19,51 @@ const Stories = ({ language }) => {
     return () => clearInterval(interval);
   }, [isAutoPlaying, t.stories.items.length]);
   
+  const handleMouseEnter = () => setIsAutoPlaying(false);
+  const handleMouseLeave = () => setIsAutoPlaying(true);
+  
   return (
     <section id="stories" className="section section-grey">
       <div className="container">
         <h2 className="section-title">{t.stories.title}</h2>
-        <p className="section-subtitle">{t.stories.subtitle}</p>
         
         <div 
-          className="carousel-container"
-          onMouseEnter={() => setIsAutoPlaying(false)}
-          onMouseLeave={() => setIsAutoPlaying(true)}
+          className="carousel-row"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
-          <div className="carousel">
-            {t.stories.items.map((story, index) => (
-              <div key={index} className="carousel-item">
-                <div className="story-card">
-                  <div className="story-location">{story.location}</div>
-                  <h3 className="story-result">{story.result}</h3>
-                  <div className="story-impact">{story.impact}</div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {t.stories.items.map((story, index) => (
+            <div key={index} className="story-card">
+              <div className="story-location">{story.location}</div>
+              <h3 className="story-result">{story.result}</h3>
+              <div className="story-impact">{story.impact}</div>
+            </div>
+          ))}
         </div>
         
         {/* Navigation Dots */}
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem', gap: '0.5rem' }}>
-          {t.stories.items.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setCurrentIndex(index);
-                setIsAutoPlaying(false);
-              }}
-              style={{
-                width: '12px',
-                height: '12px',
-                borderRadius: '50%',
-                border: 'none',
-                background: index === currentIndex ? 'var(--e2-coral)' : 'rgba(0,0,0,0.2)',
-                cursor: 'pointer',
-                transition: 'all 0.3s'
-              }}
-            />
-          ))}
+        <div className="text-center" style={{ marginTop: '2rem' }}>
+          <div style={{ display: 'inline-flex', gap: '0.5rem' }}>
+            {t.stories.items.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setIsAutoPlaying(false);
+                }}
+                style={{
+                  width: '12px',
+                  height: '12px',
+                  borderRadius: '50%',
+                  border: 'none',
+                  background: index === currentIndex ? 'var(--e2-coral)' : 'rgba(0,0,0,0.2)',
+                  cursor: 'pointer',
+                  transition: 'all 0.3s'
+                }}
+                aria-label={`Story ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

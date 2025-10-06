@@ -16,7 +16,6 @@ const FAQ = ({ language }) => {
     <section id="faq" className="section section-light">
       <div className="container">
         <h2 className="section-title">{t.faq.title}</h2>
-        <p className="section-subtitle">{t.faq.subtitle}</p>
         
         <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           {t.faq.items.map((item, index) => (
