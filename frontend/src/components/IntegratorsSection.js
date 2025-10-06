@@ -32,7 +32,7 @@ const IntegratorsSection = ({ language }) => {
   const tableData = partnerTable[language];
   
   return (
-    <section id="partners" className="section-padding bg-e2-blue text-white">
+    <section id="integrators" data-section="integrators" className="section-padding bg-e2-blue text-white">
       <div className="container">
         
         {/* Section Header */}
