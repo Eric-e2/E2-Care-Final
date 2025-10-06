@@ -59,7 +59,7 @@ const Footer = ({ language }) => {
           <div className="lang-toggle">
             <button 
               className={`lang-btn ${language === 'en' ? 'active' : ''}`}
-              onClick={() => switchLanguage('en')}
+              onClick={() => setLanguage('en')}
             >
               EN
             </button>
