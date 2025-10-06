@@ -85,6 +85,39 @@
                 </p>
             </div>
         </a>
+        <!-- E2-Care Custom JavaScript -->
+        <script>
+            // Carousel autoplay functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                const carousel = document.querySelector('#stories .carousel-row');
+                if (carousel) {
+                    let paused = false;
+                    
+                    carousel.addEventListener('mouseenter', function() {
+                        paused = true;
+                    });
+                    
+                    carousel.addEventListener('mouseleave', function() {
+                        paused = false;
+                    });
+                    
+                    setInterval(function() {
+                        if (!paused) {
+                            carousel.scrollBy({ left: 320, behavior: 'smooth' });
+                        }
+                    }, 3000);
+                }
+                
+                // Reactive layout on window resize
+                window.addEventListener('resize', function() {
+                    document.documentElement.style.setProperty('--vw', window.innerWidth + 'px');
+                });
+                
+                // Initialize viewport width
+                document.documentElement.style.setProperty('--vw', window.innerWidth + 'px');
+            });
+        </script>
+        
         <script>
             !(function (t, e) {
                 var o, n, p, r;
