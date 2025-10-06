@@ -21,10 +21,10 @@ export const LanguageProvider = ({ children }) => {
     const pathLang = location.pathname.split('/')[1];
     if (pathLang === 'fr' || pathLang === 'en') {
       setLanguage(pathLang);
-      localStorage.setItem('e2care-language', pathLang);
+      localStorage.setItem('e2-lang', pathLang);
     } else {
       // Check localStorage first, then browser language
-      const savedLang = localStorage.getItem('e2care-language');
+      const savedLang = localStorage.getItem('e2-lang');
       const browserLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
       const preferredLang = savedLang || browserLang;
       setLanguage(preferredLang);
@@ -33,9 +33,9 @@ export const LanguageProvider = ({ children }) => {
 
   const switchLanguage = (newLang) => {
     setLanguage(newLang);
-    localStorage.setItem('e2care-language', newLang);
+    localStorage.setItem('e2-lang', newLang);
     
-    // Update URL
+    // Update URL with pushState
     const currentPath = location.pathname;
     const pathSegments = currentPath.split('/');
     pathSegments[1] = newLang;

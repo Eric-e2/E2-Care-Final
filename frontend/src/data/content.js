@@ -7,12 +7,10 @@ export const content = {
       feedbacks: 'Feedbacks', 
       partners: 'Partners',
       faq: 'FAQ',
-      contact: 'Contact',
-      bookDemo: 'Book a Demo',
-      downloadPdf: 'Download PDF'
+      contact: 'Contact'
     },
     
-    // Hero Section
+    // Hero Section  
     hero: {
       headline: 'Connected care that brings peace of mind to families and better service to caregivers.',
       subtitle: 'From activity sensors to smart watches and voice-AI support — E2-Care connects people, data, and care.',
@@ -56,13 +54,12 @@ export const content = {
     // How It Works
     howItWorks: {
       title: 'How E2-Care Works',
-      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our AI layer handles the rest: trend detection (health risk patterns), fall-down alerts, medication reminders, and smart communication with caregivers and family.'
+      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our **AI layer** handles the rest: trend detection (health risk patterns), fall-down alerts, medication reminders, and smart communication with caregivers and family.'
     },
     
     // Compliance & Security
     compliance: {
       title: 'Compliance & Security',
-      subtitle: 'Healthcare-grade security and compliance standards',
       bullets: [
         'GDPR compliant (EU hosting)',
         'GxP best practices (audit-ready logs)',
@@ -73,7 +70,6 @@ export const content = {
     // Customer Success Stories
     stories: {
       title: 'Customer Success Stories',
-      subtitle: 'Real results from healthcare organizations worldwide',
       items: [
         {
           location: 'Airport LT',
@@ -124,7 +120,6 @@ export const content = {
     // FAQ
     faq: {
       title: 'Frequently Asked Questions',
-      subtitle: 'Everything you need to know about E2-Care',
       items: [
         {
           question: 'How long does installation take?',
@@ -155,8 +150,7 @@ export const content = {
     
     // Contact
     contact: {
-      title: 'Get Started with E2-Care',
-      subtitle: 'Book your demo and discover how we can help your organization'
+      title: 'Get Started with E2-Care'
     },
     
     // Footer
@@ -186,9 +180,7 @@ export const content = {
       feedbacks: 'Témoignages',
       partners: 'Partenaires', 
       faq: 'FAQ',
-      contact: 'Contact',
-      bookDemo: 'Réserver une démo',
-      downloadPdf: 'Télécharger le 1-pager'
+      contact: 'Contact'
     },
     
     // Hero Section
@@ -235,13 +227,12 @@ export const content = {
     // How It Works
     howItWorks: {
       title: 'Comment E2-Care Fonctionne',
-      description: 'Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre couche d\'IA fait le reste : détection de tendances (risques santé), alertes chutes, rappels (prise de pilules) et communication intelligente avec les aidants et la famille.'
+      description: 'Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre **couche d\'IA** fait le reste : détection de tendances (risques santé), alertes chutes, rappels (prise de pilules) et communication intelligente avec les aidants et la famille.'
     },
     
     // Compliance & Security
     compliance: {
       title: 'Conformité & Sécurité',
-      subtitle: 'Standards de sécurité et conformité grade healthcare',
       bullets: [
         'Conforme RGPD (hébergement UE)',
         'Bonnes pratiques GxP (journaux auditables)',
@@ -252,7 +243,6 @@ export const content = {
     // Customer Success Stories
     stories: {
       title: 'Témoignages Clients',
-      subtitle: 'Résultats réels d\'organisations healthcare mondiales',
       items: [
         {
           location: 'Aéroport LT',
@@ -303,7 +293,6 @@ export const content = {
     // FAQ
     faq: {
       title: 'Foire Aux Questions',
-      subtitle: 'Tout ce que vous devez savoir sur E2-Care',
       items: [
         {
           question: 'Combien de temps prend l\'installation ?',
@@ -334,8 +323,7 @@ export const content = {
     
     // Contact
     contact: {
-      title: 'Commencer avec E2-Care',
-      subtitle: 'Réservez votre démo et découvrez comment nous pouvons aider votre organisation'
+      title: 'Commencer avec E2-Care'
     },
     
     // Footer

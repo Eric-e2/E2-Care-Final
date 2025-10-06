@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
 import LandingPage from './pages/LandingPage';
@@ -7,6 +7,18 @@ import SolutionPage from './pages/SolutionPage';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
+  // Reactive layout on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      document.documentElement.style.setProperty('--vw', window.innerWidth + 'px');
+    };
+    
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Initial call
+    
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   return (
     <div className="App">
       <Router>
