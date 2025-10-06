@@ -5,7 +5,14 @@
 
 /* Foundation Colors */
 :root {
-  /* E2-Care Brand Colors */
+  /* E2-Care Brand Colors - Updated */
+  --e2-coral: #f45053;
+  --e2-blue: #2d4a8f;
+  --e2-light: #f5f6f8;
+  --e2-dark: #1a1a1a;
+  --e2-white: #ffffff;
+  
+  /* Backward compatibility */
   --coral: #f45053;
   --deep-blue: #2d4a8f;
   --light-grey: #f5f6f8;
