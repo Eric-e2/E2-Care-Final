@@ -47,7 +47,7 @@ const ProductPillars = ({ language }) => {
             return (
               <Card 
                 key={index} 
-                className="voice-card group cursor-pointer border-none shadow-soft hover:shadow-elevated transition-all duration-300"
+                className="card voice-card group cursor-pointer border-none shadow-soft hover:shadow-elevated transition-all duration-300"
               >
                 <CardContent className="p-0">
                   
