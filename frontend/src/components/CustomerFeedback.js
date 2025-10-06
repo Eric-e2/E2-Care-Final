@@ -42,15 +42,15 @@ const CustomerFeedback = ({ language }) => {
   };
   
   return (
-    <section className="section-padding bg-section">
+    <section id="feedbacks" className="section-padding bg-e2-light">
       <div className="container">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-1 text-dark-grey mb-4">
+          <h2 className="heading-1 text-e2-dark mb-4">
             {t.feedback.title}
           </h2>
-          <p className="body-large text-dark-grey mb-8">
+          <p className="body-large text-e2-dark mb-8">
             {t.feedback.subtitle}
           </p>
         </div>
