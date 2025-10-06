@@ -8,6 +8,7 @@ const Hero = ({ language }) => {
   const handleDownloadPdf = () => {
     const pdfName = language === 'en' ? 'E2-Care_1pager_EN.pdf' : 'E2-Care_1pager_FR.pdf';
     console.log(`Downloading ${pdfName}`);
+    // In production: window.open(`/assets/pdf/${pdfName}`);
   };
   
   return (

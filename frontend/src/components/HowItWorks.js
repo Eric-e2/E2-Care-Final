@@ -4,13 +4,19 @@ import { content } from '../data/content';
 const HowItWorks = ({ language }) => {
   const t = content[language];
   
+  // Convert **text** to <strong>text</strong>
+  const formatDescription = (text) => {
+    return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  };
+  
   return (
-    <section id="how-it-works" className="how-it-works">
+    <section id="how-it-works" className="section section-light">
       <div className="container">
         <h2 className="section-title">{t.howItWorks.title}</h2>
-        <div className="how-description">
-          {t.howItWorks.description}
-        </div>
+        <div 
+          className="how-description"
+          dangerouslySetInnerHTML={{ __html: formatDescription(t.howItWorks.description) }}
+        />
       </div>
     </section>
   );

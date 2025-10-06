@@ -19,7 +19,7 @@ const Solutions = ({ language }) => {
         <h2 className="section-title">{t.solutions.title}</h2>
         <p className="section-subtitle">{t.solutions.subtitle}</p>
         
-        <div className="cards-grid">
+        <div className="grid">
           {t.solutions.items.map((solution, index) => (
             <div key={index} className="card">
               <div className="card-content">
