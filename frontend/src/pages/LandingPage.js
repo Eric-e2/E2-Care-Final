@@ -10,19 +10,19 @@ import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
-const LandingPage = ({ language }) => {
+const LandingPage = () => {
   return (
     <div>
-      <Header language={language} />
-      <Hero language={language} />
-      <Solutions language={language} />
-      <HowItWorks language={language} />
-      <Compliance language={language} />
-      <Stories language={language} />
-      <Integrators language={language} />
-      <FAQ language={language} />
-      <Contact language={language} />
-      <Footer language={language} />
+      <Header />
+      <Hero />
+      <Solutions />
+      <HowItWorks />
+      <Compliance />
+      <Stories />
+      <Integrators />
+      <FAQ />
+      <Contact />
+      <Footer />
     </div>
   );
 };
