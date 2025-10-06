@@ -85,7 +85,7 @@ const CustomerFeedback = ({ language }) => {
                       </div>
                       
                       {/* Result */}
-                      <h3 className="heading-2 text-e2-blue mb-4 font-semibold leading-tight">
+                      <h3 className="card-title heading-2 text-e2-blue mb-4 font-semibold leading-tight">
                         {testimonial.result}
                       </h3>
                       
