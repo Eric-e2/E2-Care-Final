@@ -13,7 +13,8 @@ const ProductPillars = ({ language }) => {
     Thermometer, // E2-Temp & Humidity
     Truck,       // E2-Supply Chain
     MapPin,      // E2-Asset Tracking
-    Watch        // Smart Devices for Seniors
+    Watch,       // Smart Devices for Seniors
+    Handshake    // E2-Integrators & Local Partners
   ];
   
   return (
