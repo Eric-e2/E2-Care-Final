@@ -1,0 +1,98 @@
+import React from 'react';
+import { Card, CardContent } from './ui/card';
+import { Button } from './ui/button';
+import { ArrowRight, Activity, Thermometer, Truck, MapPin, Watch } from 'lucide-react';
+import { content } from '../data/content';
+
+const ProductPillars = ({ language }) => {
+  const t = content[language];
+  
+  const pillarIcons = [
+    Activity,    // E2-Care
+    Thermometer, // E2-Temp & Humidity
+    Truck,       // E2-Supply Chain
+    MapPin,      // E2-Asset Tracking
+    Watch        // Smart Devices for Seniors
+  ];
+  
+  return (
+    <section className="section-padding bg-section">
+      <div className="container">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="heading-1 text-dark-grey mb-4">
+            {t.pillars.title}
+          </h2>
+          <p className="body-large text-dark-grey">
+            {t.pillars.subtitle}
+          </p>
+        </div>
+        
+        {/* Pillars Grid */}
+        <div className="ai-grid">
+          {t.pillars.items.map((pillar, index) => {
+            const IconComponent = pillarIcons[index];
+            const accentColors = [
+              'bg-coral/10 text-coral',
+              'bg-deep-blue/10 text-deep-blue', 
+              'bg-coral/15 text-coral',
+              'bg-deep-blue/15 text-deep-blue',
+              'bg-coral/20 text-coral'
+            ];
+            
+            return (
+              <Card 
+                key={index} 
+                className="voice-card group cursor-pointer border-none shadow-soft hover:shadow-elevated transition-all duration-300"
+              >
+                <CardContent className="p-0">
+                  
+                  {/* Icon */}
+                  <div className={`w-14 h-14 rounded-2xl ${accentColors[index]} flex items-center justify-center mb-6`}>
+                    <IconComponent className="w-7 h-7" />
+                  </div>
+                  
+                  {/* Title */}
+                  <h3 className="voice-card-title">
+                    {pillar.title}
+                  </h3>
+                  
+                  {/* Description */}
+                  <p className="voice-card-description">
+                    {pillar.description}
+                  </p>
+                  
+                  {/* Features List */}
+                  <div className="mb-6">
+                    <ul className="space-y-2">
+                      {pillar.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-dark-grey">
+                          <div className="w-1.5 h-1.5 bg-coral rounded-full mr-3 flex-shrink-0"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  {/* CTA Button */}
+                  <Button 
+                    variant="outline" 
+                    className="btn-secondary w-full group-hover:bg-dark-grey group-hover:text-white transition-all duration-300"
+                  >
+                    {t.pillars.cta}
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Button>
+                  
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+        
+      </div>
+    </section>
+  );
+};
+
+export default ProductPillars;
