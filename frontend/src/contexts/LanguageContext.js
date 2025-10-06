@@ -14,37 +14,75 @@ export const useLanguage = () => {
 export const LanguageProvider = ({ children }) => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [language, setLanguage] = useState('en');
-
-  useEffect(() => {
-    // Get language from URL
-    const pathLang = location.pathname.split('/')[1];
-    if (pathLang === 'fr' || pathLang === 'en') {
-      setLanguage(pathLang);
-      localStorage.setItem('e2-lang', pathLang);
-    } else {
-      // Check localStorage first, then browser language
-      const savedLang = localStorage.getItem('e2-lang');
-      const browserLang = navigator.language.startsWith('fr') ? 'fr' : 'en';
-      const preferredLang = savedLang || browserLang;
-      setLanguage(preferredLang);
-    }
-  }, [location.pathname]);
-
-  const switchLanguage = (newLang) => {
-    setLanguage(newLang);
-    localStorage.setItem('e2-lang', newLang);
+  
+  // Initialize language from URL or localStorage or browser default
+  const getInitialLanguage = () => {
+    const path = location.pathname;
+    if (path.startsWith('/fr')) return 'fr';
+    if (path.startsWith('/en')) return 'en';
     
-    // Update URL with pushState
+    // Check localStorage for saved preference
+    const savedLanguage = localStorage.getItem('e2-lang');
+    if (savedLanguage && ['en', 'fr'].includes(savedLanguage)) {
+      return savedLanguage;
+    }
+    
+    // Default from browser language
+    const browserLang = navigator.language?.toLowerCase();
+    return browserLang?.startsWith('fr') ? 'fr' : 'en';
+  };
+
+  const [language, setLanguage] = useState(getInitialLanguage);
+
+  // Update URL when language changes - instant routing
+  useEffect(() => {
     const currentPath = location.pathname;
-    const pathSegments = currentPath.split('/');
-    pathSegments[1] = newLang;
-    const newPath = pathSegments.join('/');
-    navigate(newPath);
+    let newPath;
+    
+    // Handle root path
+    if (currentPath === '/') {
+      newPath = `/${language}`;
+    }
+    // Handle existing language paths
+    else if (currentPath.startsWith('/en') || currentPath.startsWith('/fr')) {
+      const pathWithoutLang = currentPath.substring(3) || '';
+      newPath = `/${language}${pathWithoutLang}`;
+    }
+    // Handle paths without language prefix
+    else {
+      newPath = `/${language}${currentPath}`;
+    }
+    
+    // Navigate to new path if different
+    if (currentPath !== newPath) {
+      navigate(newPath, { replace: true });
+    }
+  }, [language, location.pathname, navigate]);
+
+  // Save language preference to localStorage
+  useEffect(() => {
+    localStorage.setItem('e2-lang', language);
+  }, [language]);
+
+  // Toggle between EN and FR
+  const toggleLanguage = () => {
+    const newLanguage = language === 'en' ? 'fr' : 'en';
+    setLanguage(newLanguage);
+  };
+
+  // Set language directly
+  const setLanguageDirectly = (lang) => {
+    if (['en', 'fr'].includes(lang)) {
+      setLanguage(lang);
+    }
   };
 
   return (
-    <LanguageContext.Provider value={{ language, switchLanguage }}>
+    <LanguageContext.Provider value={{ 
+      language, 
+      setLanguage: setLanguageDirectly, 
+      toggleLanguage 
+    }}>
       {children}
     </LanguageContext.Provider>
   );
