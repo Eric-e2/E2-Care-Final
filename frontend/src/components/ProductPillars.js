@@ -21,10 +21,10 @@ const ProductPillars = ({ language }) => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-1 text-dark-grey mb-4">
+          <h2 className="heading-1 text-e2-dark mb-4">
             {t.pillars.title}
           </h2>
-          <p className="body-large text-dark-grey">
+          <p className="body-large text-e2-dark">
             {t.pillars.subtitle}
           </p>
         </div>
