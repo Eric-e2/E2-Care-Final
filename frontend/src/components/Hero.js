@@ -14,8 +14,8 @@ const Hero = ({ language }) => {
   return (
     <section className="hero">
       <div className="container">
-        <h1 className="hero-title">{t.hero.headline}</h1>
-        <p className="hero-subtitle">{t.hero.subtitle}</p>
+        <h1>{t.hero.headline}</h1>
+        <p>{t.hero.subtitle}</p>
         
         <div className="hero-buttons">
           <Link to={`/${language}/thank-you`} className="btn btn-primary">
