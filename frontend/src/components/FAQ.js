@@ -1,48 +1,43 @@
-import React from 'react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
+import React, { useState } from 'react';
 import { content } from '../data/content';
 
 const FAQ = ({ language }) => {
   const t = content[language];
+  const [openItems, setOpenItems] = useState({});
+  
+  const toggleItem = (index) => {
+    setOpenItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
   
   return (
-    <section id="faq" className="section-padding bg-e2-light">
+    <section id="faq" className="section section-light">
       <div className="container">
+        <h2 className="section-title">{t.faq.title}</h2>
+        <p className="section-subtitle">{t.faq.subtitle}</p>
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="heading-1 text-e2-dark mb-4">
-            {t.faq.title}
-          </h2>
-          <p className="body-large text-e2-dark">
-            {t.faq.subtitle}
-          </p>
-        </div>
-        
-        {/* FAQ Accordion */}
-        <div className="max-w-4xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {t.faq.items.map((item, index) => (
-              <AccordionItem 
-                key={index} 
-                value={`item-${index}`}
-                className="bg-e2-white rounded-2xl border-none shadow-soft overflow-hidden"
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          {t.faq.items.map((item, index) => (
+            <div key={index} className={`faq-item ${openItems[index] ? 'open' : ''}`}>
+              <button 
+                className="faq-question"
+                onClick={() => toggleItem(index)}
               >
-                <AccordionTrigger className="px-6 py-6 text-left hover:no-underline hover:bg-e2-light/50 transition-colors">
-                  <span className="heading-3 text-e2-dark pr-4">
-                    {item.question}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 pt-0">
-                  <p className="body-medium text-e2-dark leading-relaxed">
-                    {item.answer}
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                <span>{item.question}</span>
+                <span className="faq-icon">
+                  {openItems[index] ? '−' : '+'}
+                </span>
+              </button>
+              {openItems[index] && (
+                <div className="faq-answer">
+                  <p>{item.answer}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
-        
       </div>
     </section>
   );
