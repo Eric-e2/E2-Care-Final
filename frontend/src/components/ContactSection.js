@@ -70,7 +70,7 @@ const ContactSection = ({ language }) => {
   ];
   
   return (
-    <section className="section-padding bg-section">
+    <section id="contact" className="section-padding bg-e2-light">
       <div className="container">
         
         {/* Section Header */}
