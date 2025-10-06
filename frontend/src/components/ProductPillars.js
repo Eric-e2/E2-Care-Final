@@ -40,7 +40,8 @@ const ProductPillars = ({ language }) => {
               'bg-e2-blue/10 text-e2-blue', 
               'bg-e2-coral/15 text-e2-coral',
               'bg-e2-blue/15 text-e2-blue',
-              'bg-e2-coral/20 text-e2-coral'
+              'bg-e2-coral/20 text-e2-coral',
+              'bg-e2-blue/20 text-e2-blue'
             ];
             
             return (
