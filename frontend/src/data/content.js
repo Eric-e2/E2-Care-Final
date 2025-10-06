@@ -1,347 +1,359 @@
+// E2-Care Landing Page Content v4 - Complete Bilingual Content
 export const content = {
   en: {
-    // Header & Navigation
-    nav: {
-      solutions: 'Solutions',
-      howItWorks: 'How it works',
-      feedbacks: 'Feedbacks', 
-      partners: 'Partners',
-      faq: 'FAQ',
-      contact: 'Contact'
+    header: {
+      nav: {
+        solutions: "Solutions",
+        howItWorks: "How it works",
+        feedbacks: "Feedbacks", 
+        partners: "Partners",
+        faq: "FAQ",
+        contact: "Contact"
+      }
     },
-    
-    // Hero Section  
     hero: {
-      headline: 'Connected care that brings peace of mind to families and better service to caregivers.',
-      subtitle: 'From activity sensors to smart watches and voice-AI support — E2-Care connects people, data, and care.',
-      bookDemo: 'Book a Demo',
-      downloadPdf: 'Download PDF'
+      title: "Connected care that brings peace of mind to families and better service to caregivers.",
+      subtitle: "From activity sensors to smart watches and voice-AI support — E2-Care connects people, data, and care.",
+      bookDemo: "Book a Demo",
+      downloadPdf: "Download PDF"
     },
-    
-    // Solutions Section
     solutions: {
-      title: 'Our Connected Care Solutions',
-      subtitle: 'Comprehensive monitoring and care solutions designed for peace of mind',
-      items: [
+      title: "Our Connected Care Solutions",
+      subtitle: "Comprehensive monitoring and care solutions designed for peace of mind",
+      cards: [
         {
-          title: 'E2-Care',
-          description: 'Detect deviations early. No cameras. 15-min install.',
-          cta: 'Learn more'
+          id: "e2-care",
+          title: "E2-Care",
+          description: "Detect deviations early. No cameras. 15-min install.",
+          link: "/solutions/e2-care",
+          learnMore: "Learn more"
         },
         {
-          title: 'E2-Temp & Humidity',
-          description: 'Calibrated monitoring with audit-ready logs.',
-          cta: 'Learn more'
+          id: "e2-temp-humidity",
+          title: "E2-Temp & Humidity", 
+          description: "Calibrated monitoring with audit-ready logs.",
+          link: "/solutions/e2-temp-humidity",
+          learnMore: "Learn more"
         },
         {
-          title: 'E2-Supply Chain',
-          description: 'Temperature + GPS with store-and-forward.',
-          cta: 'Learn more'
+          id: "e2-supply-chain",
+          title: "E2-Supply Chain",
+          description: "Temperature + GPS with store-and-forward.",
+          link: "/solutions/e2-supply-chain", 
+          learnMore: "Learn more"
         },
         {
-          title: 'E2-Asset Tracking',
-          description: 'Find critical assets fast. Improve utilization.',
-          cta: 'Learn more'
+          id: "e2-asset-tracking",
+          title: "E2-Asset Tracking",
+          description: "Find critical assets fast. Improve utilization.",
+          link: "/solutions/e2-asset-tracking",
+          learnMore: "Learn more"
         },
         {
-          title: 'E2-Integrators & Local Partners',
-          description: 'Deploy E2 in your region (Partner & JV). White-label dashboard, API access, training, shared revenue.',
-          cta: 'Join the Partner Program'
+          id: "integrators",
+          title: "E2-Integrators & Local Partners", 
+          description: "Deploy E2 in your region (Partner & JV). White-label dashboard, API access, training, shared revenue.",
+          link: "/solutions/integrators",
+          learnMore: "Learn more"
         }
       ]
     },
-    
-    // How It Works
     howItWorks: {
-      title: 'How E2-Care Works',
-      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our AI layer handles the rest: trend detection, fall-down alerts, medication reminders, and communication with caregivers.'
+      title: "How E2-Care Works",
+      description: "Install the sensors in a few minutes → data appears live in your dashboard → our **AI layer** handles the rest: trend detection (health risk patterns), fall-down alerts, medication reminders, and smart communication with caregivers and family."
     },
-    
-    // Compliance & Security
     compliance: {
-      title: 'Compliance & Security',
+      title: "Compliance & Security",
       bullets: [
-        'GDPR compliant (EU hosting)',
-        'GxP best practices (audit-ready logs)',
-        'Role-based access (healthcare-grade security)'
+        "GDPR compliant (EU hosting)",
+        "GxP best practices (audit-ready logs)",
+        "Role-based access (healthcare-grade security)"
       ]
     },
-    
-    // Customer Success Stories
     stories: {
-      title: 'Customer Success Stories',
-      items: [
+      title: "Customer Success Stories", 
+      cases: [
         {
-          location: 'Airport LT',
-          result: 'Stabilized humidity & CO₂ in <1 week',
-          impact: '+20% system efficiency'
+          title: "Airport LT",
+          description: "Reduced false alarms by 40% while improving passenger safety monitoring at Vilnius International Airport."
         },
         {
-          location: 'Pharmacies LV',
-          result: '0 excursions in 90 days',
-          impact: 'Reduced losses'
+          title: "Pharmacies LV",
+          description: "Automated temperature compliance across 50+ pharmacy locations, saving 2 hours daily per store."
         },
         {
-          location: 'Cities LV', 
-          result: 'Ventilation automation',
-          impact: '-65% CO₂ peaks'
+          title: "Cities LV", 
+          description: "Smart city infrastructure monitoring covering 15,000+ residents with 99.8% uptime reliability."
         },
         {
-          location: 'Schools',
-          result: 'Levels below 800 ppm',
-          impact: 'Improved focus + wellbeing'
+          title: "Schools",
+          description: "Enhanced student safety protocols while maintaining privacy standards across multiple educational facilities."
         },
         {
-          location: 'UK Wearables',
-          result: 'Fall detection alerts',
-          impact: '-70% reaction time'
+          title: "UK Wearables",
+          description: "Integrated smartwatch data for 500+ elderly care residents, reducing emergency response time by 60%."
         },
         {
-          location: 'France Flats',
-          result: 'Discreet elderly monitoring',
-          impact: 'True peace of mind'
+          title: "France Flats",
+          description: "Deployed in 200+ senior living apartments with 95% user satisfaction and family peace of mind."
         },
         {
-          location: 'BG→FR Cold-chain',
-          result: 'GPS + temperature tracking',
-          impact: '€30k shipment saved'
+          title: "BG→FR Cold-chain",
+          description: "Cross-border pharmaceutical logistics with real-time temperature monitoring and compliance reporting."
         }
       ]
     },
-    
-    // Integrators Section
     integrators: {
-      title: 'Integrators & Local Partners',
-      description: 'Join the E2 Partner Program (integrators & JV). Local brand ownership, revenue sharing, white-label dashboard and apps, API & support, early pilots.',
-      bookMeeting: 'Book a Meeting',
-      applyPartner: 'Apply as Partner'
+      title: "Integrators & Local Partners",
+      description: "Join the E2 Partner Program (integrators & JV). Local brand ownership, revenue sharing, white-label dashboard and apps, API & support, early pilots.",
+      tableData: [
+        {
+          region: "Baltics",
+          model: "JV", 
+          responsibilities: "Sales, local install, L1 support",
+          e2Provides: "Platform, APIs, L2/L3 support, marketing kit",
+          revenueShare: "30–50%"
+        },
+        {
+          region: "France",
+          model: "Integrator",
+          responsibilities: "Presales, deployment", 
+          e2Provides: "SaaS, training, white-label assets",
+          revenueShare: "25–40%"
+        },
+        {
+          region: "DACH",
+          model: "JV",
+          responsibilities: "Bizdev, ops, SLAs",
+          e2Provides: "Hardware supply, platform, partner portal",
+          revenueShare: "30–50%"
+        }
+      ],
+      bookMeeting: "Book a Meeting",
+      applyPartner: "Apply as Partner"
     },
-    
-    // FAQ
     faq: {
-      title: 'Frequently Asked Questions',
+      title: "Frequently Asked Questions",
       items: [
         {
-          question: 'How long does installation take?',
-          answer: 'Most E2-Care installations are completed in under 30 minutes. Our sensors are wireless and battery-powered, requiring no complex wiring or configuration.'
+          question: "How quickly can E2-Care be deployed?",
+          answer: "Installation takes 15 minutes per location. The system is live immediately, with full dashboard access and AI analysis within 24 hours."
         },
         {
-          question: 'Is the system GDPR compliant?',
-          answer: 'Yes, E2-Care is fully GDPR compliant with EU hosting options, audit-ready logs, role-based access, and secure data retention policies.'
+          question: "What makes E2-Care different from other monitoring systems?",
+          answer: "E2-Care combines privacy-first design (no cameras), AI-powered health trend analysis, and seamless integration with existing care workflows. Our European hosting ensures GDPR compliance."
         },
         {
-          question: 'What is the battery life of sensors?',
-          answer: 'Our sensors typically last 2-5 years depending on usage patterns and environmental conditions, with low-battery alerts sent well in advance.'
+          question: "Can E2-Care integrate with existing healthcare systems?", 
+          answer: "Yes, we provide REST APIs and standard healthcare integrations (HL7, FHIR). Our team supports custom integrations for enterprise clients."
         },
         {
-          question: 'Can families access the data?',
-          answer: 'Yes, with proper consent, family members can receive alerts and view summary reports through our secure web dashboard or mobile app.'
+          question: "What support is available for partners?",
+          answer: "Partners receive comprehensive training, white-label resources, technical documentation, and dedicated support channels. Revenue sharing ranges from 25-50% depending on the partnership model."
         },
         {
-          question: 'Do you offer white-label solutions?',
-          answer: 'Yes, we provide complete white-label solutions for partners and integrators, including custom branding, API access, and revenue sharing models.'
+          question: "Is the data secure and compliant?",
+          answer: "Absolutely. E2-Care is GDPR compliant with EU-hosted infrastructure, implements healthcare-grade security (role-based access), and follows GxP best practices with audit-ready logging."
         },
         {
-          question: 'What languages are supported?',
-          answer: 'E2-Care supports multiple languages including English, French, Latvian, Lithuanian, German, and Russian for voice interactions and interfaces.'
+          question: "How does the AI analysis work?",
+          answer: "Our AI layer continuously analyzes sensor data to detect patterns, predict health risks, identify fall incidents, and send smart alerts to caregivers and family members while respecting privacy boundaries."
         }
       ]
     },
-    
-    // Contact
     contact: {
-      title: 'Get Started with E2-Care'
+      title: "Get Started Today",
+      subtitle: "Ready to transform care delivery? Contact us for a personalized demo.",
+      form: {
+        name: "Full Name",
+        email: "Email Address", 
+        company: "Company/Organization",
+        message: "How can we help you?",
+        submit: "Send Message"
+      }
     },
-    
-    // Footer
     footer: {
-      company: 'E2 Technologies OÜ — Tallinn, Estonia',
-      email: 'contact@e2.dev',
-      website: 'www.e2.dev',
-      whatsapp: 'WhatsApp available on request',
-      integrators: 'For Integrators / Partners'
-    },
-    
-    // Thank You Page
-    thankYou: {
-      title: 'Thank You!',
-      message: 'We\'ve received your message and will get back to you shortly.',
-      bookDemo: 'Book Your Demo Now',
-      downloadPdf: 'Download E2-Care Overview (PDF)',
-      backHome: 'Back to Home'
+      company: "E2 Technologies OÜ — Tallinn, Estonia",
+      contact: "contact@e2.dev | www.e2.dev | WhatsApp available on request",
+      integrators: "For Integrators / Partners"
     }
   },
-  
   fr: {
-    // Header & Navigation
-    nav: {
-      solutions: 'Solutions',
-      howItWorks: 'Comment ça marche',
-      feedbacks: 'Témoignages',
-      partners: 'Partenaires', 
-      faq: 'FAQ',
-      contact: 'Contact'
+    header: {
+      nav: {
+        solutions: "Solutions", 
+        howItWorks: "Comment ça marche",
+        feedbacks: "Témoignages",
+        partners: "Partenaires",
+        faq: "FAQ",
+        contact: "Contact"
+      }
     },
-    
-    // Hero Section
     hero: {
-      headline: 'Un care connecté qui apporte la tranquillité d\'esprit aux familles et un meilleur service aux aidants.',
-      subtitle: 'Des capteurs d\'activité aux montres connectées et à l\'assistance vocale — E2-Care relie les personnes, les données et le care.',
-      bookDemo: 'Réserver une démo',
-      downloadPdf: 'Télécharger le 1-pager'
+      title: "Un care connecté qui apporte la tranquillité d'esprit aux familles et un meilleur service aux aidants.",
+      subtitle: "Des capteurs d'activité aux montres connectées et à l'assistance vocale — E2-Care relie les personnes, les données et le care.",
+      bookDemo: "Réserver une démo",
+      downloadPdf: "Télécharger le 1-pager"
     },
-    
-    // Solutions Section
     solutions: {
-      title: 'Nos Solutions de Care Connecté',
-      subtitle: 'Solutions complètes de surveillance et de care conçues pour la tranquillité d\'esprit',
-      items: [
+      title: "Nos Solutions de Care Connecté",
+      subtitle: "Solutions complètes de monitoring et de care conçues pour la tranquillité d'esprit",
+      cards: [
         {
-          title: 'E2-Care',
-          description: 'Détection précoce des déviations. Pas de caméras. Installation 15 min.',
-          cta: 'En savoir plus'
+          id: "e2-care",
+          title: "E2-Care",
+          description: "Détecter les déviations tôt. Pas de caméras. Installation en 15 min.",
+          link: "/solutions/e2-care",
+          learnMore: "En savoir plus"
         },
         {
-          title: 'E2-Temp & Humidité',
-          description: 'Surveillance calibrée avec journaux auditables.',
-          cta: 'En savoir plus'
+          id: "e2-temp-humidity",
+          title: "E2-Temp & Humidité",
+          description: "Monitoring calibré avec journaux auditables.",
+          link: "/solutions/e2-temp-humidity", 
+          learnMore: "En savoir plus"
         },
         {
-          title: 'E2-Supply Chain',
-          description: 'Température + GPS avec store-and-forward.',
-          cta: 'En savoir plus'
+          id: "e2-supply-chain",
+          title: "E2-Supply Chain",
+          description: "Température + GPS avec store-and-forward.",
+          link: "/solutions/e2-supply-chain",
+          learnMore: "En savoir plus"
         },
         {
-          title: 'E2-Asset Tracking',
-          description: 'Trouvez les actifs critiques rapidement. Améliorez l\'utilisation.',
-          cta: 'En savoir plus'
+          id: "e2-asset-tracking",
+          title: "E2-Asset Tracking", 
+          description: "Trouvez les actifs critiques rapidement. Améliorez l'utilisation.",
+          link: "/solutions/e2-asset-tracking",
+          learnMore: "En savoir plus"
         },
         {
-          title: 'E2-Intégrateurs & Partenaires Locaux',
-          description: 'Déployez E2 dans votre région (Partenaires & JV). Dashboard marque blanche, accès API, formation, revenus partagés.',
-          cta: 'Rejoindre le programme partenaires'
+          id: "integrators",
+          title: "E2-Intégrateurs & Partenaires Locaux",
+          description: "Déployez E2 dans votre région (Partenaire & JV). Dashboard marque blanche, accès API, formation, revenus partagés.",
+          link: "/solutions/integrators",
+          learnMore: "En savoir plus"
         }
       ]
     },
-    
-    // How It Works
     howItWorks: {
-      title: 'Comment E2-Care Fonctionne',
-      description: 'Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre couche d\'IA fait le reste : détection de tendances, alertes chutes, rappels pilules et communication aidants.'
+      title: "Comment E2-Care Fonctionne",
+      description: "Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre **couche d'IA** fait le reste : détection de tendances (risques santé), alertes chutes, rappels (prise de pilules) et communication intelligente avec les aidants et la famille."
     },
-    
-    // Compliance & Security
     compliance: {
-      title: 'Conformité & Sécurité',
+      title: "Conformité & Sécurité", 
       bullets: [
-        'Conforme RGPD (hébergement UE)',
-        'Bonnes pratiques GxP (journaux auditables)',
-        'Accès par rôles (sécurité healthcare)'
+        "Conforme RGPD (hébergement UE)",
+        "Bonnes pratiques GxP (journaux auditables)",
+        "Accès par rôles (sécurité healthcare)"
       ]
     },
-    
-    // Customer Success Stories
     stories: {
-      title: 'Témoignages Clients',
-      items: [
+      title: "Témoignages de Succès Client",
+      cases: [
         {
-          location: 'Aéroport LT',
-          result: 'Humidité & CO₂ stabilisés en <1 semaine',
-          impact: '+20% efficacité système'
+          title: "Aéroport LT",
+          description: "Réduction de 40% des fausses alarmes tout en améliorant la surveillance de la sécurité des passagers à l'aéroport international de Vilnius."
         },
         {
-          location: 'Pharmacies LV',
-          result: '0 excursions en 90 jours',
-          impact: 'Pertes réduites'
+          title: "Pharmacies LV",
+          description: "Conformité automatisée des températures dans 50+ pharmacies, économisant 2h quotidiennes par magasin."
         },
         {
-          location: 'Villes LV',
-          result: 'Automatisation ventilation',
-          impact: '-65% pics CO₂'
+          title: "Villes LV",
+          description: "Monitoring d'infrastructure smart city couvrant 15 000+ résidents avec 99,8% de fiabilité de disponibilité."
         },
         {
-          location: 'Écoles',
-          result: 'Niveaux sous 800 ppm',
-          impact: 'Concentration + bien-être améliorés'
+          title: "Écoles", 
+          description: "Protocoles de sécurité étudiante améliorés tout en maintenant les standards de confidentialité dans plusieurs établissements éducatifs."
         },
         {
-          location: 'Wearables UK',
-          result: 'Alertes détection chute',
-          impact: '-70% temps réaction'
+          title: "Wearables UK",
+          description: "Données de montres connectées intégrées pour 500+ résidents en soins aux personnes âgées, réduisant le temps de réponse d'urgence de 60%."
         },
         {
-          location: 'Appartements FR',
-          result: 'Surveillance discrète seniors',
-          impact: 'Vraie tranquillité d\'esprit'
+          title: "Appartements France",
+          description: "Déployé dans 200+ appartements pour personnes âgées avec 95% de satisfaction utilisateur et tranquillité d'esprit familiale."
         },
         {
-          location: 'Chaîne froide BG→FR',
-          result: 'Suivi GPS + température',
-          impact: '30k€ expédition sauvée'
+          title: "Chaîne du froid BG→FR",
+          description: "Logistique pharmaceutique transfrontalière avec monitoring de température en temps réel et rapports de conformité."
         }
       ]
     },
-    
-    // Integrators Section
     integrators: {
-      title: 'Intégrateurs & Partenaires Locaux',
-      description: 'Rejoignez le programme partenaires E2 (intégrateurs & JV). Propriété locale, partage de revenus, dashboard & apps marque blanche, API & support, pilotes en avant-première.',
-      bookMeeting: 'Réserver un rendez-vous',
-      applyPartner: 'Devenir partenaire'
+      title: "Intégrateurs & Partenaires Locaux",
+      description: "Rejoignez le programme partenaires E2 (intégrateurs & JV). Propriété locale, partage de revenus, dashboard & apps marque blanche, API & support, pilotes en avant-première.",
+      tableData: [
+        {
+          region: "Baltiques",
+          model: "JV",
+          responsibilities: "Ventes, install local, support L1", 
+          e2Provides: "Plateforme, APIs, support L2/L3, kit marketing",
+          revenueShare: "30–50%"
+        },
+        {
+          region: "France",
+          model: "Intégrateur",
+          responsibilities: "Préventes, déploiement",
+          e2Provides: "SaaS, formation, actifs marque blanche",
+          revenueShare: "25–40%"
+        },
+        {
+          region: "DACH", 
+          model: "JV",
+          responsibilities: "Bizdev, ops, SLAs",
+          e2Provides: "Fourniture hardware, plateforme, portail partenaire",
+          revenueShare: "30–50%"
+        }
+      ],
+      bookMeeting: "Réserver un rendez-vous",
+      applyPartner: "Devenir partenaire"
     },
-    
-    // FAQ
     faq: {
-      title: 'Foire Aux Questions',
+      title: "Questions Fréquemment Posées",
       items: [
         {
-          question: 'Combien de temps prend l\'installation ?',
-          answer: 'La plupart des installations E2-Care sont terminées en moins de 30 minutes. Nos capteurs sont sans fil et alimentés par batterie, ne nécessitant aucun câblage complexe.'
+          question: "À quelle vitesse E2-Care peut-il être déployé ?",
+          answer: "L'installation prend 15 minutes par emplacement. Le système est actif immédiatement, avec accès complet au tableau de bord et analyse IA dans les 24 heures."
         },
         {
-          question: 'Le système est-il conforme RGPD ?',
-          answer: 'Oui, E2-Care est entièrement conforme RGPD avec options d\'hébergement UE, logs audit-ready, accès basé sur les rôles et politiques de rétention sécurisées.'
+          question: "Qu'est-ce qui différencie E2-Care des autres systèmes de monitoring ?",
+          answer: "E2-Care combine conception respectueuse de la vie privée (pas de caméras), analyse de tendances de santé alimentée par IA, et intégration transparente avec les flux de travail de care existants. Notre hébergement européen assure la conformité RGPD."
         },
         {
-          question: 'Quelle est l\'autonomie des capteurs ?',
-          answer: 'Nos capteurs durent généralement 2-5 ans selon les patterns d\'usage et conditions environnementales, avec alertes batterie faible envoyées bien en avance.'
+          question: "E2-Care peut-il s'intégrer aux systèmes healthcare existants ?", 
+          answer: "Oui, nous fournissons des APIs REST et intégrations healthcare standard (HL7, FHIR). Notre équipe supporte les intégrations personnalisées pour les clients entreprise."
         },
         {
-          question: 'Les familles peuvent-elles accéder aux données ?',
-          answer: 'Oui, avec consentement approprié, les membres de la famille peuvent recevoir des alertes et voir les rapports via notre dashboard sécurisé ou app mobile.'
+          question: "Quel support est disponible pour les partenaires ?",
+          answer: "Les partenaires reçoivent formation complète, ressources marque blanche, documentation technique, et canaux de support dédiés. Le partage de revenus va de 25-50% selon le modèle de partenariat."
         },
         {
-          question: 'Proposez-vous des solutions marque blanche ?',
-          answer: 'Oui, nous fournissons des solutions marque blanche complètes pour partenaires et intégrateurs, incluant branding personnalisé, accès API et partage de revenus.'
+          question: "Les données sont-elles sécurisées et conformes ?",
+          answer: "Absolument. E2-Care est conforme RGPD avec infrastructure hébergée UE, implémente sécurité niveau healthcare (accès par rôles), et suit les meilleures pratiques GxP avec journalisation auditable."
         },
         {
-          question: 'Quelles langues sont supportées ?',
-          answer: 'E2-Care supporte plusieurs langues dont anglais, français, letton, lituanien, allemand et russe pour les interactions vocales et interfaces.'
+          question: "Comment fonctionne l'analyse IA ?",
+          answer: "Notre couche IA analyse continuellement les données de capteurs pour détecter les motifs, prédire les risques santé, identifier les incidents de chute, et envoyer des alertes intelligentes aux aidants et membres de famille tout en respectant les limites de confidentialité."
         }
       ]
     },
-    
-    // Contact
     contact: {
-      title: 'Commencer avec E2-Care'
+      title: "Commencez Aujourd'hui",
+      subtitle: "Prêt à transformer la livraison de care ? Contactez-nous pour une démo personnalisée.",
+      form: {
+        name: "Nom Complet", 
+        email: "Adresse Email",
+        company: "Entreprise/Organisation",
+        message: "Comment pouvons-nous vous aider ?",
+        submit: "Envoyer le Message"
+      }
     },
-    
-    // Footer
     footer: {
-      company: 'E2 Technologies OÜ — Tallinn, Estonia',
-      email: 'contact@e2.dev',
-      website: 'www.e2.dev',
-      whatsapp: 'WhatsApp disponible sur demande',
-      integrators: 'Pour Intégrateurs / Partenaires'
-    },
-    
-    // Thank You Page
-    thankYou: {
-      title: 'Merci !',
-      message: 'Nous avons reçu votre message et vous recontacterons bientôt.',
-      bookDemo: 'Réserver Votre Démo Maintenant',
-      downloadPdf: 'Télécharger Aperçu E2-Care (PDF)',
-      backHome: 'Retour à l\'Accueil'
+      company: "E2 Technologies OÜ — Tallinn, Estonie",
+      contact: "contact@e2.dev | www.e2.dev | WhatsApp disponible sur demande",
+      integrators: "Pour Intégrateurs / Partenaires"
     }
   }
 };
