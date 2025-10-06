@@ -12,27 +12,25 @@ const FAQ = () => {
   };
   
   return (
-    <section id="faq" className="section section-light">
+    <section id="faq" className="section faq-section">
       <div className="container">
-        <h2 className="section-title">{t.faq.title}</h2>
+        <h2 className="section-title">{t.title}</h2>
         
-        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-          {t.faq.items.map((item, index) => (
-            <div key={index} className={`faq-item ${openItems[index] ? 'open' : ''}`}>
-              <button 
-                className="faq-question"
-                onClick={() => toggleItem(index)}
+        <div className="faq-container">
+          {t.items.map((item, index) => (
+            <div key={index} className="faq-item">
+              <button
+                className={`faq-question ${openIndex === index ? 'active' : ''}`}
+                onClick={() => toggleFAQ(index)}
               >
                 <span>{item.question}</span>
-                <span className="faq-icon">
-                  {openItems[index] ? '−' : '+'}
+                <span className={`faq-icon ${openIndex === index ? 'active' : ''}`}>
+                  +
                 </span>
               </button>
-              {openItems[index] && (
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
-                </div>
-              )}
+              <div className={`faq-answer ${openIndex === index ? 'active' : ''}`}>
+                <p>{item.answer}</p>
+              </div>
             </div>
           ))}
         </div>
