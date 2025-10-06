@@ -2,9 +2,9 @@ import React from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
-const Footer = ({ language }) => {
-  const { setLanguage } = useLanguage();
-  const t = content[language];
+const Footer = () => {
+  const { language, setLanguage } = useLanguage();
+  const t = content[language].footer;
   
   return (
     <footer className="footer">
