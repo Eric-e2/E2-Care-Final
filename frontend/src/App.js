@@ -31,8 +31,12 @@ function App() {
             <Route path="/fr/thank-you" element={<ThankYouPage language="fr" />} />
             
             {/* Solution Pages */}
-            <Route path="/en/solutions/:solutionId" element={<SolutionPage language="en" />} />
-            <Route path="/fr/solutions/:solutionId" element={<SolutionPage language="fr" />} />
+            <Route path="/solutions/e2-care" element={<SolutionPage />} />
+            <Route path="/solutions/e2-temp-humidity" element={<SolutionPage />} />
+            <Route path="/solutions/e2-supply-chain" element={<SolutionPage />} />
+            <Route path="/solutions/e2-asset-tracking" element={<SolutionPage />} />
+            <Route path="/solutions/smart-devices" element={<SolutionPage />} />
+            <Route path="/solutions/integrators" element={<SolutionPage />} />
           </Routes>
         </LanguageProvider>
       </Router>
