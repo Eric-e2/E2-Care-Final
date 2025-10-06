@@ -168,6 +168,38 @@ export const content = {
       integrators: 'For Integrators / Partners'
     },
     
+    // FAQ
+    faq: {
+      title: 'Frequently Asked Questions',
+      subtitle: 'Everything you need to know about E2-Care',
+      items: [
+        {
+          question: 'How long does installation take?',
+          answer: 'Most E2-Care installations are completed in under 30 minutes. Our sensors are wireless and battery-powered, requiring no complex wiring or configuration.'
+        },
+        {
+          question: 'Is the system GDPR compliant?',
+          answer: 'Yes, E2-Care is fully GDPR compliant with EU hosting options, audit-ready logs, role-based access, and secure data retention policies.'
+        },
+        {
+          question: 'What is the battery life of sensors?',
+          answer: 'Our sensors typically last 2-5 years depending on usage patterns and environmental conditions, with low-battery alerts sent well in advance.'
+        },
+        {
+          question: 'Can families access the data?',
+          answer: 'Yes, with proper consent, family members can receive alerts and view summary reports through our secure web dashboard or mobile app.'
+        },
+        {
+          question: 'Do you offer white-label solutions?',
+          answer: 'Yes, we provide complete white-label solutions for partners and integrators, including custom branding, API access, and revenue sharing models.'
+        },
+        {
+          question: 'What languages are supported?',
+          answer: 'E2-Care supports multiple languages including English, French, Latvian, Lithuanian, German, and Russian for voice interactions and interfaces.'
+        }
+      ]
+    },
+
     // Thank You Page
     thankYou: {
       title: 'Thank You!',
