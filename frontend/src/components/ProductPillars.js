@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { ArrowRight, Activity, Thermometer, Truck, MapPin, Watch } from 'lucide-react';
