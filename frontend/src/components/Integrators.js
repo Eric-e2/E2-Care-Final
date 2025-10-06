@@ -1,95 +1,50 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
-const Integrators = ({ language }) => {
-  const t = content[language];
-  
-  const tableData = {
-    en: {
-      headers: ['Region', 'Model', 'Responsibilities', 'E2 Provides', 'Revenue Share'],
-      rows: [
-        ['Baltics', 'JV', 'Sales, local install, L1 support', 'Platform, APIs, L2/L3 support, marketing kit', '30–50%'],
-        ['France', 'Integrator', 'Presales, deployment', 'SaaS, training, white-label assets', '25–40%'],
-        ['DACH', 'JV', 'Bizdev, ops, SLAs', 'Hardware supply, platform, partner portal', '30–50%']
-      ]
-    },
-    fr: {
-      headers: ['Région', 'Modèle', 'Responsabilités', 'E2 Fournit', 'Partage Revenus'],
-      rows: [
-        ['Baltiques', 'JV', 'Ventes, install locale, support L1', 'Plateforme, APIs, support L2/L3, kit marketing', '30–50%'],
-        ['France', 'Intégrateur', 'Préventes, déploiement', 'SaaS, formation, assets marque blanche', '25–40%'],
-        ['DACH', 'JV', 'Bizdev, ops, SLAs', 'Fourniture hardware, plateforme, portail partenaire', '30–50%']
-      ]
-    }
-  };
-  
-  const table = tableData[language];
-  
+const Integrators = () => {
+  const { language } = useLanguage();
+  const t = content[language].integrators;
+
   return (
-    <section id="integrators" className="section section-blue">
+    <section id="integrators" className="section">
       <div className="container">
-        <h2 className="section-title">{t.integrators.title}</h2>
-        <p className="section-subtitle" style={{ color: 'white !important' }}>
-          {t.integrators.description}
-        </p>
-        
-        {/* Partner Table */}
-        <div className="table-container">
-          <table className="table">
+        <div className="integrators-content">
+          <h2 className="section-title">{t.title}</h2>
+          <p className="integrators-description">{t.description}</p>
+          
+          {/* Integrators Table */}
+          <table className="integrators-table">
             <thead>
               <tr>
-                {table.headers.map((header, index) => (
-                  <th key={index}>{header}</th>
-                ))}
+                <th>{language === 'en' ? 'Region' : 'Région'}</th>
+                <th>{language === 'en' ? 'Model' : 'Modèle'}</th>
+                <th>{language === 'en' ? 'Responsibilities' : 'Responsabilités'}</th>
+                <th>{language === 'en' ? 'E2 Provides' : 'E2 Fournit'}</th>
+                <th>{language === 'en' ? 'Revenue Share' : 'Partage Revenus'}</th>
               </tr>
             </thead>
             <tbody>
-              {table.rows.map((row, rowIndex) => (
-                <tr key={rowIndex}>
-                  {row.map((cell, cellIndex) => (
-                    <td key={cellIndex}>
-                      {cellIndex === 4 ? (
-                        <strong style={{ color: 'var(--e2-coral)' }}>{cell}</strong>
-                      ) : cellIndex === 1 ? (
-                        <span style={{ 
-                          background: 'rgba(244, 80, 83, 0.2)', 
-                          color: 'var(--e2-coral)', 
-                          padding: '0.25rem 0.75rem', 
-                          borderRadius: '12px', 
-                          fontSize: '0.875rem',
-                          fontWeight: '600'
-                        }}>
-                          {cell}
-                        </span>
-                      ) : (
-                        cell
-                      )}
-                    </td>
-                  ))}
+              {t.tableData.map((row, index) => (
+                <tr key={index}>
+                  <td>{row.region}</td>
+                  <td>{row.model}</td>
+                  <td>{row.responsibilities}</td>
+                  <td>{row.e2Provides}</td>
+                  <td>{row.revenueShare}</td>
                 </tr>
               ))}
             </tbody>
           </table>
-        </div>
-        
-        {/* CTA Buttons */}
-        <div className="text-center" style={{ marginTop: '3rem' }}>
-          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Link to={`/${language}/thank-you`} className="btn btn-primary">
-              {t.integrators.bookMeeting}
-            </Link>
-            <Link 
-              to={`/${language}/solutions/integrators`} 
-              className="btn" 
-              style={{
-                background: 'transparent',
-                color: 'white',
-                border: '2px solid white'
-              }}
-            >
-              {t.integrators.applyPartner}
-            </Link>
+          
+          {/* CTAs */}
+          <div className="integrators-ctas">
+            <a href={`/${language}/thank-you`} className="btn btn-white">
+              {t.bookMeeting}
+            </a>
+            <a href={`/${language}/thank-you`} className="btn btn-white">
+              {t.applyPartner}
+            </a>
           </div>
         </div>
       </div>
