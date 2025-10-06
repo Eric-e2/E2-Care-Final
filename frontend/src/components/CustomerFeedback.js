@@ -61,10 +61,9 @@ const CustomerFeedback = ({ language }) => {
           {/* Main Carousel */}
           <div className="overflow-hidden rounded-2xl">
             <div 
-              className="flex transition-transform duration-500 ease-out"
+              className="carousel-row flex transition-transform duration-500 ease-out"
               style={{ 
                 transform: `translateX(-${currentIndex * 100}%)`,
-                gap: '24px'
               }}
               onMouseEnter={() => setIsAutoPlaying(false)}
               onMouseLeave={() => setIsAutoPlaying(true)}
