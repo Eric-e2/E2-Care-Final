@@ -9,9 +9,30 @@ const IntegratorsSection = ({ language }) => {
   const t = content[language];
   
   const benefitIcons = [Globe, DollarSign, Users, Zap, Code, Handshake];
+
+  const partnerTable = {
+    en: {
+      headers: ['Region', 'Model', 'Responsibilities', 'E2 Provides', 'Revenue Share'],
+      rows: [
+        ['Baltics', 'JV', 'Sales, local install, L1 support', 'Platform, APIs, L2/L3 support, marketing kit', '30–50%'],
+        ['France', 'Integrator', 'Presales, deployment', 'SaaS, training, white-label assets', '25–40%'],
+        ['DACH', 'JV', 'Bizdev, ops, SLAs', 'Hardware supply, platform, partner portal', '30–50%']
+      ]
+    },
+    fr: {
+      headers: ['Région', 'Modèle', 'Responsabilités', 'E2 Fournit', 'Partage Revenus'],
+      rows: [
+        ['Baltiques', 'JV', 'Ventes, install locale, support L1', 'Plateforme, APIs, support L2/L3, kit marketing', '30–50%'],
+        ['France', 'Intégrateur', 'Préventes, déploiement', 'SaaS, formation, assets marque blanche', '25–40%'],
+        ['DACH', 'JV', 'Bizdev, ops, SLAs', 'Fourniture hardware, plateforme, portail partenaire', '30–50%']
+      ]
+    }
+  };
+
+  const tableData = partnerTable[language];
   
   return (
-    <section className="section-padding bg-gradient-to-br from-deep-blue to-deep-blue/90 text-white">
+    <section id="partners" className="section-padding bg-e2-blue text-white">
       <div className="container">
         
         {/* Section Header */}
@@ -39,7 +60,7 @@ const IntegratorsSection = ({ language }) => {
                   <CardContent className="p-6 flex items-center">
                     
                     {/* Icon */}
-                    <div className="w-12 h-12 bg-coral/20 text-coral rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
+                    <div className="w-12 h-12 bg-e2-coral/20 text-e2-coral rounded-2xl flex items-center justify-center mr-4 flex-shrink-0">
                       <IconComponent className="w-6 h-6" />
                     </div>
                     
@@ -55,6 +76,44 @@ const IntegratorsSection = ({ language }) => {
             
           </div>
         </div>
+
+        {/* Partner Table */}
+        <div className="max-w-6xl mx-auto mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-white/20">
+                    {tableData.headers.map((header, index) => (
+                      <th key={index} className="px-6 py-4 text-left text-white font-semibold body-medium">
+                        {header}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {tableData.rows.map((row, rowIndex) => (
+                    <tr key={rowIndex} className="border-t border-white/10 hover:bg-white/5 transition-colors">
+                      {row.map((cell, cellIndex) => (
+                        <td key={cellIndex} className="px-6 py-4 text-white body-small">
+                          {cellIndex === 4 ? (
+                            <span className="font-medium text-e2-coral">{cell}</span>
+                          ) : cellIndex === 1 ? (
+                            <span className="bg-e2-coral/20 text-e2-coral px-2 py-1 rounded-full text-xs font-medium">
+                              {cell}
+                            </span>
+                          ) : (
+                            cell
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
         
         {/* CTA Buttons */}
         <div className="text-center">
@@ -62,7 +121,7 @@ const IntegratorsSection = ({ language }) => {
             
             <Link to={`/${language}/thank-you`} className="w-full sm:w-auto">
               <Button 
-                className="bg-coral hover:bg-coral/90 text-white border-none w-full sm:w-auto min-w-[200px]"
+                className="bg-e2-coral hover:bg-e2-coral/90 text-white border-none w-full sm:w-auto min-w-[200px]"
               >
                 <Users className="w-4 h-4 mr-2" />
                 {t.integrators.bookMeeting}
