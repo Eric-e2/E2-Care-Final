@@ -7,7 +7,9 @@ export const solutionsContent = {
       benefits: [
         '70% faster response to risky events',
         'Fewer avoidable hospitalizations', 
-        'Peace of mind for families & caregivers'
+        'Peace of mind for families & caregivers',
+        'No cameras — privacy-first approach',
+        '15-minute installation process'
       ],
       miniCase: 'UK care home: wearable + room sensors cut average fall response time by 70% within 2 weeks.',
       cta: 'Book a Demo'
@@ -19,7 +21,9 @@ export const solutionsContent = {
       benefits: [
         'Zero excursions for 90+ days (target)',
         'Faster audits (hours → minutes)',
-        'Less product loss'
+        'Less product loss',
+        'GxP compliant monitoring',
+        'Automated alert systems'
       ],
       miniCase: 'Pharmacies LV: zero excursions in 90 days; audit time cut by 60%.',
       cta: 'Talk to an Expert'
@@ -31,7 +35,9 @@ export const solutionsContent = {
       benefits: [
         'Fewer claims and disputes',
         'Root-cause analysis per route leg',
-        'SLA proof with shareable reports'
+        'SLA proof with shareable reports',
+        'Real-time GPS tracking',
+        'Store-and-forward reliability'
       ],
       miniCase: 'BG→FR shipment: real-time GPS + temperature saved €30k by catching an excursion early.',
       cta: 'Start a Pilot'
@@ -43,22 +49,12 @@ export const solutionsContent = {
       benefits: [
         'Time saved per shift',
         'Lower capex via higher utilization',
-        'Loss prevention'
+        'Loss prevention',
+        'Maintenance optimization',
+        'Real-time asset location'
       ],
       miniCase: 'Hospital: 30% faster asset retrieval; avoided purchase of 8 extra pumps.',
       cta: 'See How It Works'
-    },
-    'smart-devices': {
-      title: 'Smart Devices for Seniors',
-      problem: 'Seniors forget medication; asking for help is hard; language barriers exist.',
-      solution: 'Connected watches, smart pill dispensers, and voice-AI in multiple languages (EN/FR/LV/LT/DE/RU) for reminders and help.',
-      benefits: [
-        'Better adherence to medication',
-        'Instant help requests',
-        'Comfort for families; fast ROI'
-      ],
-      miniCase: 'FR flats: voice-AI reminders improved adherence; families report higher peace of mind.',
-      cta: 'Book a Demo'
     },
     'integrators': {
       title: 'E2-Integrators & Local Partners',
@@ -85,7 +81,9 @@ export const solutionsContent = {
       benefits: [
         'Temps de réaction 70% plus rapide',
         'Moins d\'hospitalisations évitables',
-        'Tranquillité d\'esprit pour familles & aidants'
+        'Tranquillité d\'esprit pour familles & aidants',
+        'Pas de caméras — approche privacy-first',
+        'Installation en 15 minutes'
       ],
       miniCase: 'EHPAD UK : montres + capteurs pièce ont réduit de 70% le délai moyen d\'intervention en 2 semaines.',
       cta: 'Réserver une Démo'
@@ -97,7 +95,9 @@ export const solutionsContent = {
       benefits: [
         '0 excursion sur 90+ jours (objectif)',
         'Audits accélérés (heures → minutes)',
-        'Moins de pertes produits'
+        'Moins de pertes produits',
+        'Surveillance conforme GxP',
+        'Systèmes d\'alerte automatisés'
       ],
       miniCase: 'Pharmacies LV : 0 excursion en 90 jours ; temps d\'audit réduit de 60%.',
       cta: 'Parler à un Expert'
@@ -109,7 +109,9 @@ export const solutionsContent = {
       benefits: [
         'Moins de litiges',
         'Analyse de causes par segment',
-        'Preuve d\'SLA avec rapports partageables'
+        'Preuve d\'SLA avec rapports partageables',
+        'Suivi GPS temps réel',
+        'Fiabilité store-and-forward'
       ],
       miniCase: 'Expédition BG→FR : GPS + température en temps réel ont sauvé 30 000 € grâce à une alerte précoce.',
       cta: 'Lancer un Pilote'
@@ -121,22 +123,12 @@ export const solutionsContent = {
       benefits: [
         'Temps gagné par shift',
         'Moins de capex grâce à une meilleure utilisation',
-        'Prévention des pertes'
+        'Prévention des pertes',
+        'Optimisation maintenance',
+        'Localisation actifs temps réel'
       ],
       miniCase: 'Hôpital : récupération des équipements 30% plus rapide ; achat de 8 pompes évité.',
       cta: 'Voir Comment Ça Marche'
-    },
-    'smart-devices': {
-      title: 'Appareils Connectés pour Seniors',
-      problem: 'Oubli de médicaments ; difficulté à demander de l\'aide ; barrières de langue.',
-      solution: 'Montres connectées, piluliers intelligents et IA vocale multilingue (EN/FR/LV/LT/DE/RU) pour rappels et assistance.',
-      benefits: [
-        'Meilleure observance',
-        'Demandes d\'aide instantanées',
-        'Tranquillité pour les familles ; ROI rapide'
-      ],
-      miniCase: 'Appartements FR : rappels vocaux ont amélioré l\'observance ; familles plus sereines.',
-      cta: 'Réserver une Démo'
     },
     'integrators': {
       title: 'E2-Intégrateurs & Partenaires Locaux',

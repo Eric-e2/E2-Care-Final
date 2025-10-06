@@ -1,11 +1,8 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
-import { ArrowLeft, CheckCircle, TrendingUp } from 'lucide-react';
+import { solutionsContent } from '../data/solutions';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { solutionsContent } from '../data/solutions';
 
 const SolutionPage = ({ language }) => {
   const { solutionId } = useParams();
@@ -13,146 +10,116 @@ const SolutionPage = ({ language }) => {
   
   if (!solution) {
     return (
-      <div className="min-h-screen bg-e2-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="heading-1 text-e2-dark mb-4">Solution Not Found</h1>
-          <Link to={`/${language}`}>
-            <Button className="btn-primary">Back to Home</Button>
-          </Link>
+      <div>
+        <Header language={language} />
+        <div className="section section-light">
+          <div className="container" style={{ textAlign: 'center' }}>
+            <h1 className="section-title">Solution Not Found</h1>
+            <Link to={`/${language}`} className="btn btn-primary">Back to Home</Link>
+          </div>
         </div>
+        <Footer language={language} />
       </div>
     );
   }
   
   return (
-    <div className="min-h-screen bg-e2-white">
+    <div>
       <Header language={language} />
       
       {/* Breadcrumb */}
-      <section className="pt-24 pb-8 bg-e2-light">
+      <section className="section-light" style={{ padding: '2rem 0 1rem' }}>
         <div className="container">
-          <nav className="flex items-center space-x-2 text-sm text-e2-dark mb-6">
-            <Link to={`/${language}`} className="hover:text-e2-coral transition-colors">
+          <nav style={{ fontSize: '0.875rem', color: 'var(--e2-dark)' }}>
+            <Link to={`/${language}`} style={{ color: 'var(--e2-coral)', textDecoration: 'none' }}>
               {language === 'en' ? 'Home' : 'Accueil'}
             </Link>
-            <span>→</span>
-            <Link to={`/${language}#solutions`} className="hover:text-e2-coral transition-colors">
+            <span style={{ margin: '0 0.5rem' }}>→</span>
+            <Link to={`/${language}#solutions`} style={{ color: 'var(--e2-coral)', textDecoration: 'none' }}>
               {language === 'en' ? 'Solutions' : 'Solutions'}
             </Link>
-            <span>→</span>
-            <span className="text-e2-coral font-medium">{solution.title}</span>
+            <span style={{ margin: '0 0.5rem' }}>→</span>
+            <span>{solution.title}</span>
           </nav>
         </div>
       </section>
       
-      {/* Hero Section */}
-      <section className="section-padding bg-e2-light">
+      {/* Solution Content */}
+      <section className="section section-light">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-12">
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             
-            {/* Main Content */}
-            <div className="lg:col-span-2">
-              <h1 className="heading-hero text-e2-dark mb-6">
-                {solution.title}
-              </h1>
-              
-              {/* Problem */}
-              <Card className="mb-8 border-none shadow-soft">
-                <CardContent className="p-8">
-                  <h2 className="heading-2 text-e2-coral mb-4">
-                    {language === 'en' ? 'Problem' : 'Problème'}
-                  </h2>
-                  <p className="body-large text-e2-dark leading-relaxed">
-                    {solution.problem}
-                  </p>
-                </CardContent>
-              </Card>
-              
-              {/* Solution */}
-              <Card className="mb-8 border-none shadow-soft">
-                <CardContent className="p-8">
-                  <h2 className="heading-2 text-e2-blue mb-4">
-                    {language === 'en' ? 'Solution' : 'Solution'}
-                  </h2>
-                  <p className="body-large text-e2-dark leading-relaxed">
-                    {solution.solution}
-                  </p>
-                </CardContent>
-              </Card>
-              
-              {/* Benefits & ROI */}
-              <Card className="mb-8 border-none shadow-soft">
-                <CardContent className="p-8">
-                  <h2 className="heading-2 text-e2-coral mb-6">
-                    {language === 'en' ? 'Benefits & ROI' : 'Bénéfices & ROI'}
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {solution.benefits.map((benefit, index) => (
-                      <div key={index} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-e2-coral mr-3 mt-1 flex-shrink-0" />
-                        <p className="body-medium text-e2-dark">{benefit}</p>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-              
-              {/* Mini Case */}
-              <Card className="border-none shadow-soft bg-e2-light">
-                <CardContent className="p-8">
-                  <div className="flex items-center mb-4">
-                    <TrendingUp className="w-6 h-6 text-e2-blue mr-3" />
-                    <h2 className="heading-2 text-e2-blue">
-                      {language === 'en' ? 'Success Story' : 'Cas de Succès'}
-                    </h2>
-                  </div>
-                  <p className="body-large text-e2-dark leading-relaxed">
-                    {solution.miniCase}
-                  </p>
-                </CardContent>
-              </Card>
-              
+            <h1 className="hero-title">{solution.title}</h1>
+            
+            {/* Problem */}
+            <div className="card" style={{ marginBottom: '2rem' }}>
+              <h2 className="section-title" style={{ color: 'var(--e2-coral)', fontSize: '2rem' }}>
+                {language === 'en' ? 'Problem' : 'Problème'}
+              </h2>
+              <p className="card-text" style={{ fontSize: '1.125rem', lineHeight: '1.6' }}>
+                {solution.problem}
+              </p>
             </div>
             
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-32">
-                
-                {/* CTA Card */}
-                <Card className="border-none shadow-soft mb-6">
-                  <CardContent className="p-8 text-center">
-                    <h3 className="heading-3 text-e2-dark mb-4">
-                      {language === 'en' ? 'Ready to get started?' : 'Prêt à commencer ?'}
-                    </h3>
-                    <p className="body-medium text-e2-dark mb-6">
-                      {language === 'en' 
-                        ? 'Book a demo and see how E2-Care can help your organization.'
-                        : 'Réservez une démo et voyez comment E2-Care peut aider votre organisation.'
-                      }
-                    </p>
-                    <Link to={`/${language}/thank-you`}>
-                      <Button className="btn-primary w-full mb-4">
-                        {solution.cta}
-                      </Button>
-                    </Link>
-                    <Link to={`/${language}#contact`}>
-                      <Button variant="outline" className="btn-secondary w-full">
-                        {language === 'en' ? 'Get a Quote' : 'Obtenir un Devis'}
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-                
-                {/* Back to Solutions */}
-                <Link 
-                  to={`/${language}#solutions`}
-                  className="inline-flex items-center text-e2-coral hover:text-e2-blue transition-colors"
-                >
-                  <ArrowLeft className="w-4 h-4 mr-2" />
-                  {language === 'en' ? 'Back to Solutions' : 'Retour aux Solutions'}
-                </Link>
-                
+            {/* Solution */}
+            <div className="card" style={{ marginBottom: '2rem' }}>
+              <h2 className="section-title" style={{ color: 'var(--e2-blue)', fontSize: '2rem' }}>
+                {language === 'en' ? 'Solution' : 'Solution'}
+              </h2>
+              <p className="card-text" style={{ fontSize: '1.125rem', lineHeight: '1.6' }}>
+                {solution.solution}
+              </p>
+            </div>
+            
+            {/* Benefits & ROI */}
+            <div className="card" style={{ marginBottom: '2rem' }}>
+              <h2 className="section-title" style={{ color: 'var(--e2-coral)', fontSize: '2rem' }}>
+                {language === 'en' ? 'Benefits & ROI' : 'Bénéfices & ROI'}
+              </h2>
+              <div style={{ display: 'grid', gap: '1rem' }}>
+                {solution.benefits.map((benefit, index) => (
+                  <div key={index} style={{ display: 'flex', alignItems: 'flex-start' }}>
+                    <span style={{ 
+                      color: 'var(--e2-coral)', 
+                      fontWeight: 'bold', 
+                      marginRight: '0.75rem',
+                      marginTop: '0.25rem'
+                    }}>
+                      ✓
+                    </span>
+                    <p className="card-text">{benefit}</p>
+                  </div>
+                ))}
               </div>
+            </div>
+            
+            {/* Mini Case */}
+            <div className="card" style={{ background: 'var(--e2-light)', marginBottom: '3rem' }}>
+              <h2 className="section-title" style={{ color: 'var(--e2-blue)', fontSize: '2rem' }}>
+                {language === 'en' ? 'Success Story' : 'Cas de Succès'}
+              </h2>
+              <p className="card-text" style={{ fontSize: '1.125rem', lineHeight: '1.6', fontStyle: 'italic' }}>
+                {solution.miniCase}
+              </p>
+            </div>
+            
+            {/* CTAs */}
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '2rem' }}>
+                <Link to={`/${language}/thank-you`} className="btn btn-primary">
+                  {solution.cta}
+                </Link>
+                <Link to={`/${language}#contact`} className="btn btn-secondary">
+                  {language === 'en' ? 'Get a Quote' : 'Obtenir un Devis'}
+                </Link>
+              </div>
+              
+              <Link 
+                to={`/${language}#solutions`}
+                style={{ color: 'var(--e2-coral)', textDecoration: 'none', fontSize: '1rem' }}
+              >
+                ← {language === 'en' ? 'Back to Solutions' : 'Retour aux Solutions'}
+              </Link>
             </div>
             
           </div>
@@ -160,28 +127,28 @@ const SolutionPage = ({ language }) => {
       </section>
       
       {/* Final CTA Band */}
-      <section className="section-padding bg-e2-blue text-white">
-        <div className="container text-center">
-          <h2 className="heading-1 text-white mb-6">
+      <section className="section section-blue">
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2 className="section-title">
             {language === 'en' ? 'Start Your Pilot Today' : 'Lancez Votre Pilote Aujourd\'hui'}
           </h2>
-          <p className="body-large text-white/90 mb-8 max-w-2xl mx-auto">
+          <p className="section-subtitle">
             {language === 'en'
               ? 'Join hundreds of organizations already using E2-Care to improve safety and efficiency.'
               : 'Rejoignez des centaines d\'organisations utilisant déjà E2-Care pour améliorer sécurité et efficacité.'
             }
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={`/${language}/thank-you`}>
-              <Button className="bg-e2-coral hover:bg-e2-coral/90 text-white border-none min-w-[200px]">
-                {language === 'en' ? 'Start a Pilot' : 'Lancer un Pilote'}
-              </Button>
+          <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to={`/${language}/thank-you`} className="btn btn-primary">
+              {language === 'en' ? 'Start a Pilot' : 'Lancer un Pilote'}
             </Link>
-            <Link to={`/${language}#contact`}>
-              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 min-w-[200px]">
-                {language === 'en' ? 'Contact Sales' : 'Contacter Ventes'}
-              </Button>
-            </Link>
+            <a href="mailto:contact@e2.dev" className="btn" style={{
+              background: 'transparent',
+              color: 'white',
+              border: '2px solid white'
+            }}>
+              {language === 'en' ? 'Contact Sales' : 'Contacter Ventes'}
+            </a>
           </div>
         </div>
       </section>

@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
-import { CheckCircle, Download, Calendar, ArrowLeft } from 'lucide-react';
 import { content } from '../data/content';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -11,10 +8,9 @@ const ThankYouPage = ({ language }) => {
   const t = content[language];
   
   const handlePdfDownload = () => {
-    // Mock PDF download - will be replaced with actual PDF generation
     const pdfName = language === 'en' ? 'E2-Care_1pager_EN.pdf' : 'E2-Care_1pager_FR.pdf';
     console.log(`Downloading ${pdfName}`);
-    // In real implementation: window.open(`/assets/pdf/${pdfName}`);
+    // In production: window.open(`/assets/pdf/${pdfName}`);
   };
   
   const handleTidyCalOpen = () => {
@@ -22,94 +18,63 @@ const ThankYouPage = ({ language }) => {
   };
   
   return (
-    <div className="min-h-screen bg-page">
+    <div>
       <Header language={language} />
       
-      <section className="section-padding">
+      <section className="section section-light">
         <div className="container">
-          <div className="max-w-2xl mx-auto text-center">
+          <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
             
             {/* Success Icon */}
-            <div className="mb-8">
-              <CheckCircle className="w-20 h-20 text-coral mx-auto" />
+            <div style={{ 
+              width: '80px', 
+              height: '80px', 
+              background: 'var(--e2-coral)', 
+              borderRadius: '50%', 
+              margin: '0 auto 2rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <span style={{ color: 'white', fontSize: '2rem', fontWeight: 'bold' }}>✓</span>
             </div>
             
-            {/* Thank You Message */}
-            <h1 className="heading-hero text-dark-grey mb-4">
-              {t.thankYou.title}
-            </h1>
+            <h1 className="hero-title">{t.thankYou.title}</h1>
+            <p className="hero-subtitle">{t.thankYou.message}</p>
             
-            <p className="body-large text-dark-grey mb-12">
-              {t.thankYou.message}
-            </p>
-            
-            {/* Action Cards */}
-            <div className="grid md:grid-cols-2 gap-6 mb-12">
-              
-              {/* TidyCal Booking Card */}
-              <Card className="p-6 border-none shadow-soft hover:shadow-elevated transition-all duration-300">
-                <CardContent className="text-center p-0">
-                  <Calendar className="w-12 h-12 text-deep-blue mx-auto mb-4" />
-                  <h3 className="heading-3 text-dark-grey mb-4">
-                    {t.thankYou.bookDemo}
-                  </h3>
-                  <Button 
-                    onClick={handleTidyCalOpen}
-                    className="btn-primary w-full"
-                  >
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {t.thankYou.bookDemo}
-                  </Button>
-                </CardContent>
-              </Card>
-              
-              {/* PDF Download Card */}
-              <Card className="p-6 border-none shadow-soft hover:shadow-elevated transition-all duration-300">
-                <CardContent className="text-center p-0">
-                  <Download className="w-12 h-12 text-coral mx-auto mb-4" />
-                  <h3 className="heading-3 text-dark-grey mb-4">
-                    {t.thankYou.downloadPdf}
-                  </h3>
-                  <Button 
-                    onClick={handlePdfDownload}
-                    variant="outline"
-                    className="btn-secondary w-full"
-                  >
-                    <Download className="w-4 h-4 mr-2" />
-                    {t.thankYou.downloadPdf}
-                  </Button>
-                </CardContent>
-              </Card>
-              
+            {/* Action Buttons */}
+            <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+              <button onClick={handleTidyCalOpen} className="btn btn-primary">
+                {t.thankYou.bookDemo}
+              </button>
+              <button onClick={handlePdfDownload} className="btn btn-secondary">
+                {t.thankYou.downloadPdf}
+              </button>
             </div>
             
-            {/* TidyCal Embed */}
-            <Card className="p-6 border-none shadow-soft mb-8">
-              <CardContent className="p-0">
-                <h3 className="heading-3 text-dark-grey mb-6 text-center">
-                  {language === 'en' ? 'Schedule Your Demo' : 'Planifiez Votre Démo'}
-                </h3>
-                <div className="bg-light-grey rounded-2xl p-8">
-                  <div className="text-center text-dark-grey">
-                    <Calendar className="w-16 h-16 mx-auto mb-4 opacity-50" />
-                    <p className="body-medium">
-                      {language === 'en' ? 'TidyCal booking calendar will be embedded here' : 'Le calendrier de réservation TidyCal sera intégré ici'}
-                    </p>
-                    <p className="caption mt-2">
-                      https://tidycal.com/ericbrisset/30-minute-meeting
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            {/* TidyCal Embed Placeholder */}
+            <div className="card" style={{ padding: '3rem', textAlign: 'center' }}>
+              <h3 className="card-title">
+                {language === 'en' ? 'Schedule Your Demo' : 'Planifiez Votre Démo'}
+              </h3>
+              <div style={{ 
+                background: 'var(--e2-light)', 
+                padding: '2rem', 
+                borderRadius: '12px',
+                color: 'var(--e2-dark)'
+              }}>
+                <p>{language === 'en' ? 'TidyCal booking calendar will be embedded here' : 'Le calendrier de réservation TidyCal sera intégré ici'}</p>
+                <p style={{ fontSize: '0.875rem', opacity: 0.7, marginTop: '1rem' }}>
+                  https://tidycal.com/ericbrisset/30-minute-meeting
+                </p>
+              </div>
+            </div>
             
-            {/* Back to Home */}
-            <Link to={`/${language}`}>
-              <Button variant="outline" className="btn-secondary">
-                <ArrowLeft className="w-4 h-4 mr-2" />
+            <div style={{ marginTop: '2rem' }}>
+              <Link to={`/${language}`} className="btn btn-secondary">
                 {t.thankYou.backHome}
-              </Button>
-            </Link>
+              </Link>
+            </div>
             
           </div>
         </div>
