@@ -30,19 +30,19 @@ const SolutionPage = () => {
   
   return (
     <div>
-      <Header language={language} />
+      <Header />
       
       {/* Breadcrumb */}
-      <section className="section-light" style={{ padding: '2rem 0 1rem' }}>
+      <section className="section" style={{ padding: '2rem 0 1rem', background: 'var(--e2-light)' }}>
         <div className="container">
           <nav style={{ fontSize: '0.875rem', color: 'var(--e2-dark)' }}>
-            <Link to={`/${language}`} style={{ color: 'var(--e2-coral)', textDecoration: 'none' }}>
+            <a href={`/${language}`} style={{ color: 'var(--e2-coral)', textDecoration: 'none' }}>
               {language === 'en' ? 'Home' : 'Accueil'}
-            </Link>
+            </a>
             <span style={{ margin: '0 0.5rem' }}>→</span>
-            <Link to={`/${language}#solutions`} style={{ color: 'var(--e2-coral)', textDecoration: 'none' }}>
+            <a href={`/${language}#solutions`} style={{ color: 'var(--e2-coral)', textDecoration: 'none' }}>
               {language === 'en' ? 'Solutions' : 'Solutions'}
-            </Link>
+            </a>
             <span style={{ margin: '0 0.5rem' }}>→</span>
             <span>{solution.title}</span>
           </nav>
