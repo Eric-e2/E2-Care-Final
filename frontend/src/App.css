@@ -508,3 +508,44 @@ select:focus {
 html {
   scroll-behavior: smooth;
 }
+
+/* === E2-CARE FINAL PATCH - FORCE CORRECT COLORS === */
+:root{
+  --e2-coral:#f45053; --e2-blue:#2d4a8f; --e2-light:#f5f6f8; --e2-dark:#1a1a1a; --e2-white:#ffffff;
+  --bg-section:var(--e2-white); --bg-alt:var(--e2-light);
+}
+
+/* Reset fonds rose partout */
+* { background-image:none !important; }
+section, .section, [data-section] { background:var(--bg-section) !important; }
+
+/* Sections foncées (lisibilité) */
+#compliance, [data-section="compliance"],
+#integrators, [data-section="integrators"]{
+  background:var(--e2-blue) !important; color:var(--e2-white) !important;
+}
+#compliance h2, #integrators h2 { color:var(--e2-white) !important; }
+#compliance p, #integrators p, #compliance li, #integrators li { color:var(--e2-white) !important; }
+
+/* Customer Stories : cartes blanches sur fond gris clair */
+#stories, [data-section="stories"]{ background:var(--e2-light) !important; }
+#stories .card{ background:#fff !important; color:var(--e2-dark) !important; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,.06); }
+#stories h3, #stories .card-title{ color:var(--e2-blue) !important; }
+
+/* Boutons */
+.btn-primary{ background:var(--e2-coral) !important; color:#fff !important; border-color:var(--e2-coral) !important; }
+.btn-primary:hover{ filter:brightness(.92); }
+.btn-secondary{ color:var(--e2-blue) !important; border:1px solid var(--e2-blue) !important; background:transparent !important; }
+.btn-secondary:hover{ background:var(--e2-blue) !important; color:#fff !important; }
+
+/* Header sticky + nav */
+.header{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.9) !important; border-bottom:1px solid rgba(0,0,0,.06); }
+
+/* Grille "Solutions" */
+#solutions .card{ min-height:280px; }
+
+/* Carousel horizontal joli */
+.carousel-row{ display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:8px; }
+.carousel-row > *{ scroll-snap-align:start; flex:0 0 300px; }
+.carousel-row::-webkit-scrollbar{ height:8px; }
+.carousel-row::-webkit-scrollbar-thumb{ background:rgba(0,0,0,.2); border-radius:8px; }
