@@ -66,23 +66,23 @@ const CustomerFeedback = ({ language }) => {
             >
               
               {t.feedback.testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-2">
-                  <Card className="voice-card bg-white border-none shadow-soft mx-auto max-w-2xl">
+                <div key={index} className="w-full flex-shrink-0" style={{ padding: '0 12px' }}>
+                  <Card className="bg-e2-white border-none shadow-soft mx-auto max-w-2xl rounded-xl overflow-hidden">
                     <CardContent className="p-8 text-center">
                       
                       {/* Location Badge */}
-                      <div className="inline-flex items-center bg-coral/10 text-coral px-4 py-2 rounded-2xl mb-6">
+                      <div className="inline-flex items-center bg-e2-coral/10 text-e2-coral px-4 py-2 rounded-2xl mb-6">
                         <MapPin className="w-4 h-4 mr-2" />
                         <span className="body-small font-medium">{testimonial.location}</span>
                       </div>
                       
                       {/* Result */}
-                      <h3 className="heading-2 text-dark-grey mb-4">
+                      <h3 className="heading-2 text-e2-blue mb-4 font-semibold">
                         {testimonial.result}
                       </h3>
                       
                       {/* Impact */}
-                      <div className="flex items-center justify-center bg-deep-blue/5 text-deep-blue px-6 py-3 rounded-2xl">
+                      <div className="flex items-center justify-center bg-e2-blue/5 text-e2-blue px-6 py-3 rounded-2xl">
                         <TrendingUp className="w-5 h-5 mr-2" />
                         <span className="body-medium font-medium">{testimonial.impact}</span>
                       </div>
