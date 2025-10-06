@@ -1,10 +1,15 @@
 export const content = {
   en: {
-    // Navigation
+    // Header & Navigation
     nav: {
+      solutions: 'Solutions',
+      howItWorks: 'How it works',
+      feedbacks: 'Feedbacks', 
+      partners: 'Partners',
+      faq: 'FAQ',
+      contact: 'Contact',
       bookDemo: 'Book a Demo',
-      downloadPdf: 'Download PDF',
-      forIntegrators: 'For Integrators / Partners'
+      downloadPdf: 'Download PDF'
     },
     
     // Hero Section
@@ -15,71 +20,61 @@ export const content = {
       downloadPdf: 'Download PDF'
     },
     
-    // Product Pillars
-    pillars: {
+    // Solutions Section
+    solutions: {
       title: 'Our Connected Care Solutions',
       subtitle: 'Comprehensive monitoring and care solutions designed for peace of mind',
       items: [
         {
           title: 'E2-Care',
-          description: 'Behavioral monitoring with PIR/DOOR/AIR sensors. Detect deviations early with privacy-first approach.',
-          features: ['Privacy-first monitoring', 'Early deviation detection', 'Comprehensive sensor network']
+          description: 'Detect deviations early. No cameras. 15-min install.',
+          cta: 'Learn more'
         },
         {
           title: 'E2-Temp & Humidity',
-          description: 'Calibrated sensors for pharmacies and hospitals. Ensure compliance with zero excursion tolerance.',
-          features: ['Calibrated precision sensors', 'Compliance ready', 'Zero excursion tolerance']
+          description: 'Calibrated monitoring with audit-ready logs.',
+          cta: 'Learn more'
         },
         {
           title: 'E2-Supply Chain',
-          description: 'Temperature and GPS tracking for transport. Real-time alerts with full traceability.',
-          features: ['Real-time GPS tracking', 'Temperature monitoring', 'Full supply chain visibility']
+          description: 'Temperature + GPS with store-and-forward.',
+          cta: 'Learn more'
         },
         {
           title: 'E2-Asset Tracking',
-          description: 'Locate medical assets and optimize usage across healthcare facilities.',
-          features: ['Real-time asset location', 'Usage optimization', 'Healthcare facility integration']
-        },
-        {
-          title: 'Smart Devices for Seniors',
-          description: 'Watches, pill dispensers, voice-AI support. Multilingual, emergency-ready with fast ROI.',
-          features: ['Multilingual support', 'Emergency response', 'Fast ROI delivery']
+          description: 'Find critical assets fast. Improve utilization.',
+          cta: 'Learn more'
         },
         {
           title: 'E2-Integrators & Local Partners',
-          description: 'Deploy E2 solutions in your region with our Partner & JV program. White-label dashboard, API access, training, and shared revenue model.',
-          features: ['White-label dashboard', 'API access & training', 'Shared revenue model']
+          description: 'Deploy E2 in your region (Partner & JV). White-label dashboard, API access, training, shared revenue.',
+          cta: 'Join the Partner Program'
         }
-      ],
-      cta: 'Learn More'
+      ]
     },
     
     // How It Works
     howItWorks: {
       title: 'How E2-Care Works',
-      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our AI layer handles the rest: trend detection (health risk patterns), fall-down alerts, reminders (medication), and smart communication with caregivers and family.'
+      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our AI layer handles the rest: trend detection (health risk patterns), fall-down alerts, medication reminders, and smart communication with caregivers and family.'
     },
     
     // Compliance & Security
     compliance: {
       title: 'Compliance & Security',
-      subtitle: 'Built with healthcare standards and data protection in mind',
-      features: [
-        'GDPR compliant',
-        'EU hosting option',
-        'Audit-ready logs',
-        'Role-based access',
-        'GxP alignment',
-        'Secure data retention'
+      subtitle: 'Healthcare-grade security and compliance standards',
+      bullets: [
+        'GDPR compliant (EU hosting)',
+        'GxP best practices (audit-ready logs)',
+        'Role-based access (healthcare-grade security)'
       ]
     },
     
-    // Customer Feedback
-    feedback: {
+    // Customer Success Stories
+    stories: {
       title: 'Customer Success Stories',
       subtitle: 'Real results from healthcare organizations worldwide',
-      cta: 'Discover more success stories →',
-      testimonials: [
+      items: [
         {
           location: 'Airport LT',
           result: 'Stabilized humidity & CO₂ in <1 week',
@@ -91,7 +86,7 @@ export const content = {
           impact: 'Reduced losses'
         },
         {
-          location: 'Cities LV',
+          location: 'Cities LV', 
           result: 'Ventilation automation',
           impact: '-65% CO₂ peaks'
         },
@@ -101,19 +96,19 @@ export const content = {
           impact: 'Improved focus + wellbeing'
         },
         {
-          location: 'UK Healthcare',
-          result: 'Fall detection wearables',
+          location: 'UK Wearables',
+          result: 'Fall detection alerts',
           impact: '-70% reaction time'
         },
         {
-          location: 'France',
+          location: 'France Flats',
           result: 'Discreet elderly monitoring',
           impact: 'True peace of mind'
         },
         {
-          location: 'BG→FR Transport',
-          result: 'Cold-chain GPS tracking',
-          impact: 'Saved €30k shipment'
+          location: 'BG→FR Cold-chain',
+          result: 'GPS + temperature tracking',
+          impact: '€30k shipment saved'
         }
       ]
     },
@@ -121,56 +116,9 @@ export const content = {
     // Integrators Section
     integrators: {
       title: 'Integrators & Local Partners',
-      description: 'Join the E2 Partner Program to deploy connected care and monitoring in your region.',
-      benefits: [
-        'White-label dashboards',
-        'Joint venture model',
-        'Local customer ownership',
-        'Shared revenue',
-        'API access',
-        'Early pilots'
-      ],
+      description: 'Join the E2 Partner Program (integrators & JV). Local brand ownership, revenue sharing, white-label dashboard and apps, API & support, early pilots.',
       bookMeeting: 'Book a Meeting',
       applyPartner: 'Apply as Partner'
-    },
-    
-    // Interfaces Section
-    interfaces: {
-      title: 'Complete Platform Ecosystem',
-      subtitle: 'Access your data anywhere, anytime',
-      items: [
-        'Web Dashboard',
-        'Mobile Apps (iOS/Android)',
-        'Installer App (Coming Soon)',
-        'API/MQTT/Webhooks',
-        'Multi-tenant Cloud Dashboard'
-      ]
-    },
-    
-    // Contact Form
-    contact: {
-      title: 'Get Started with E2-Care',
-      subtitle: 'Book your demo and discover how we can help your organization',
-      form: {
-        name: 'Full Name',
-        email: 'Email Address',
-        company: 'Company',
-        role: 'Role/Position',
-        country: 'Country',
-        useCase: 'Use Case',
-        message: 'Message',
-        consent: 'I agree to be contacted by E2 Technologies regarding this inquiry',
-        submit: 'Send Message'
-      }
-    },
-    
-    // Footer
-    footer: {
-      company: 'E2 Technologies OÜ — Tallinn, Estonia',
-      contact: 'contact@e2.dev',
-      website: 'www.e2.dev',
-      whatsapp: 'WhatsApp available on request',
-      integrators: 'For Integrators / Partners'
     },
     
     // FAQ
@@ -204,7 +152,22 @@ export const content = {
         }
       ]
     },
-
+    
+    // Contact
+    contact: {
+      title: 'Get Started with E2-Care',
+      subtitle: 'Book your demo and discover how we can help your organization'
+    },
+    
+    // Footer
+    footer: {
+      company: 'E2 Technologies OÜ — Tallinn, Estonia',
+      email: 'contact@e2.dev',
+      website: 'www.e2.dev',
+      whatsapp: 'WhatsApp available on request',
+      integrators: 'For Integrators / Partners'
+    },
+    
     // Thank You Page
     thankYou: {
       title: 'Thank You!',
@@ -216,11 +179,16 @@ export const content = {
   },
   
   fr: {
-    // Navigation
+    // Header & Navigation
     nav: {
+      solutions: 'Solutions',
+      howItWorks: 'Comment ça marche',
+      feedbacks: 'Témoignages',
+      partners: 'Partenaires', 
+      faq: 'FAQ',
+      contact: 'Contact',
       bookDemo: 'Réserver une démo',
-      downloadPdf: 'Télécharger le PDF',
-      forIntegrators: 'Pour Intégrateurs / Partenaires'
+      downloadPdf: 'Télécharger le 1-pager'
     },
     
     // Hero Section
@@ -231,43 +199,37 @@ export const content = {
       downloadPdf: 'Télécharger le 1-pager'
     },
     
-    // Product Pillars
-    pillars: {
+    // Solutions Section
+    solutions: {
       title: 'Nos Solutions de Care Connecté',
       subtitle: 'Solutions complètes de surveillance et de care conçues pour la tranquillité d\'esprit',
       items: [
         {
           title: 'E2-Care',
-          description: 'Surveillance comportementale avec capteurs PIR/DOOR/AIR. Détection précoce des déviations avec approche privacy-first.',
-          features: ['Surveillance privacy-first', 'Détection précoce', 'Réseau de capteurs complet']
+          description: 'Détection précoce des déviations. Pas de caméras. Installation 15 min.',
+          cta: 'En savoir plus'
         },
         {
           title: 'E2-Temp & Humidité',
-          description: 'Capteurs calibrés pour pharmacies et hôpitaux. Conformité assurée avec tolérance zéro excursion.',
-          features: ['Capteurs de précision calibrés', 'Prêt conformité', 'Tolérance zéro excursion']
+          description: 'Surveillance calibrée avec journaux auditables.',
+          cta: 'En savoir plus'
         },
         {
           title: 'E2-Supply Chain',
-          description: 'Suivi température et GPS pour transport. Alertes temps réel avec traçabilité complète.',
-          features: ['Suivi GPS temps réel', 'Surveillance température', 'Visibilité supply chain complète']
+          description: 'Température + GPS avec store-and-forward.',
+          cta: 'En savoir plus'
         },
         {
           title: 'E2-Asset Tracking',
-          description: 'Localisation d\'actifs médicaux et optimisation d\'usage dans les établissements de santé.',
-          features: ['Localisation temps réel', 'Optimisation usage', 'Intégration établissements santé']
-        },
-        {
-          title: 'Appareils Connectés Seniors',
-          description: 'Montres, piluliers, assistance vocal-IA. Multilingue, prêt urgence avec ROI rapide.',
-          features: ['Support multilingue', 'Réponse d\'urgence', 'ROI rapide']
+          description: 'Trouvez les actifs critiques rapidement. Améliorez l\'utilisation.',
+          cta: 'En savoir plus'
         },
         {
           title: 'E2-Intégrateurs & Partenaires Locaux',
-          description: 'Déployez les solutions E2 dans votre région via notre programme Partenaires & JV. Tableau de bord marque blanche, accès API, formation, et modèle de revenus partagé.',
-          features: ['Dashboard marque blanche', 'Accès API & formation', 'Modèle revenus partagé']
+          description: 'Déployez E2 dans votre région (Partenaires & JV). Dashboard marque blanche, accès API, formation, revenus partagés.',
+          cta: 'Rejoindre le programme partenaires'
         }
-      ],
-      cta: 'En savoir plus'
+      ]
     },
     
     // How It Works
@@ -279,23 +241,19 @@ export const content = {
     // Compliance & Security
     compliance: {
       title: 'Conformité & Sécurité',
-      subtitle: 'Conçu selon les standards healthcare et protection des données',
-      features: [
-        'Conforme RGPD',
-        'Option hébergement UE',
-        'Logs audit-ready',
-        'Accès basé rôles',
-        'Alignement GxP',
-        'Rétention sécurisée données'
+      subtitle: 'Standards de sécurité et conformité grade healthcare',
+      bullets: [
+        'Conforme RGPD (hébergement UE)',
+        'Bonnes pratiques GxP (journaux auditables)',
+        'Accès par rôles (sécurité healthcare)'
       ]
     },
     
-    // Customer Feedback
-    feedback: {
-      title: 'Retours Clients',
+    // Customer Success Stories
+    stories: {
+      title: 'Témoignages Clients',
       subtitle: 'Résultats réels d\'organisations healthcare mondiales',
-      cta: 'Voir plus de retours clients →',
-      testimonials: [
+      items: [
         {
           location: 'Aéroport LT',
           result: 'Humidité & CO₂ stabilisés en <1 semaine',
@@ -317,19 +275,19 @@ export const content = {
           impact: 'Concentration + bien-être améliorés'
         },
         {
-          location: 'Santé UK',
-          result: 'Wearables détection chute',
+          location: 'Wearables UK',
+          result: 'Alertes détection chute',
           impact: '-70% temps réaction'
         },
         {
-          location: 'France',
+          location: 'Appartements FR',
           result: 'Surveillance discrète seniors',
           impact: 'Vraie tranquillité d\'esprit'
         },
         {
-          location: 'Transport BG→FR',
-          result: 'GPS chaîne froide',
-          impact: '€30k expédition sauvée'
+          location: 'Chaîne froide BG→FR',
+          result: 'Suivi GPS + température',
+          impact: '30k€ expédition sauvée'
         }
       ]
     },
@@ -337,56 +295,9 @@ export const content = {
     // Integrators Section
     integrators: {
       title: 'Intégrateurs & Partenaires Locaux',
-      description: 'Rejoignez le programme partenaires E2 pour déployer le care connecté dans votre région (intégrateurs ou JV).',
-      benefits: [
-        'Dashboards marque blanche',
-        'Modèle joint venture',
-        'Propriété clients locaux',
-        'Partages revenus',
-        'Accès API',
-        'Pilotes anticipés'
-      ],
+      description: 'Rejoignez le programme partenaires E2 (intégrateurs & JV). Propriété locale, partage de revenus, dashboard & apps marque blanche, API & support, pilotes en avant-première.',
       bookMeeting: 'Réserver un rendez-vous',
       applyPartner: 'Devenir partenaire'
-    },
-    
-    // Interfaces Section
-    interfaces: {
-      title: 'Écosystème Plateforme Complète',
-      subtitle: 'Accédez à vos données partout, tout le temps',
-      items: [
-        'Dashboard Web',
-        'Apps Mobile (iOS/Android)',
-        'App Installateur (Bientôt)',
-        'API/MQTT/Webhooks',
-        'Dashboard Cloud Multi-tenant'
-      ]
-    },
-    
-    // Contact Form
-    contact: {
-      title: 'Commencer avec E2-Care',
-      subtitle: 'Réservez votre démo et découvrez comment nous pouvons aider votre organisation',
-      form: {
-        name: 'Nom Complet',
-        email: 'Adresse Email',
-        company: 'Entreprise',
-        role: 'Rôle/Position',
-        country: 'Pays',
-        useCase: 'Cas d\'Usage',
-        message: 'Message',
-        consent: 'J\'accepte d\'être contacté par E2 Technologies concernant cette demande',
-        submit: 'Envoyer Message'
-      }
-    },
-    
-    // Footer
-    footer: {
-      company: 'E2 Technologies OÜ — Tallinn, Estonia',
-      contact: 'contact@e2.dev',
-      website: 'www.e2.dev',
-      whatsapp: 'WhatsApp disponible sur demande',
-      integrators: 'Pour Intégrateurs / Partenaires'
     },
     
     // FAQ
@@ -420,7 +331,22 @@ export const content = {
         }
       ]
     },
-
+    
+    // Contact
+    contact: {
+      title: 'Commencer avec E2-Care',
+      subtitle: 'Réservez votre démo et découvrez comment nous pouvons aider votre organisation'
+    },
+    
+    // Footer
+    footer: {
+      company: 'E2 Technologies OÜ — Tallinn, Estonia',
+      email: 'contact@e2.dev',
+      website: 'www.e2.dev',
+      whatsapp: 'WhatsApp disponible sur demande',
+      integrators: 'Pour Intégrateurs / Partenaires'
+    },
+    
     // Thank You Page
     thankYou: {
       title: 'Merci !',
