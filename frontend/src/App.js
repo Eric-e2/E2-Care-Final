@@ -7,7 +7,7 @@ import SolutionPage from './pages/SolutionPage';
 import { LanguageProvider } from './contexts/LanguageContext';
 
 function App() {
-  // Reactive layout on window resize
+  // CUSTOM JS: Recompute layout on resize (reactive)
   useEffect(() => {
     const handleResize = () => {
       document.documentElement.style.setProperty('--vw', window.innerWidth + 'px');

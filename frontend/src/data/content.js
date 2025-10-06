@@ -54,7 +54,7 @@ export const content = {
     // How It Works
     howItWorks: {
       title: 'How E2-Care Works',
-      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our **AI layer** handles the rest: trend detection (health risk patterns), fall-down alerts, medication reminders, and smart communication with caregivers and family.'
+      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our AI layer handles the rest: trend detection, fall-down alerts, medication reminders, and communication with caregivers.'
     },
     
     // Compliance & Security
@@ -227,7 +227,7 @@ export const content = {
     // How It Works
     howItWorks: {
       title: 'Comment E2-Care Fonctionne',
-      description: 'Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre **couche d\'IA** fait le reste : détection de tendances (risques santé), alertes chutes, rappels (prise de pilules) et communication intelligente avec les aidants et la famille.'
+      description: 'Installez les capteurs en quelques minutes → les données apparaissent en direct sur votre tableau de bord → notre couche d\'IA fait le reste : détection de tendances, alertes chutes, rappels pilules et communication aidants.'
     },
     
     // Compliance & Security

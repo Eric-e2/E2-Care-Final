@@ -18,6 +18,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: none !important; /* Remove pink everywhere */
 }
 
 body {
@@ -29,33 +30,10 @@ body {
   overflow-x: hidden;
 }
 
-/* === TYPOGRAPHY === */
-.hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--e2-dark);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--e2-dark);
-  margin-bottom: 2rem;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* === GLOBAL CSS OVERRIDE === */
-/* Center all section titles & subtitles */
-h2.section-title,
-.section-title,
-section h2 {
+/* Titles - All section titles centered */
+section h2,
+.section-title {
   text-align: center !important;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
@@ -68,25 +46,11 @@ section h2 {
   text-align: center !important;
   max-width: 780px;
   margin: 8px auto 0 !important;
-  color: var(--e2-dark);
+  color: #1a1a1a;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 3rem;
-}
-
-.card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--e2-dark);
-  margin-bottom: 1rem;
-}
-
-.card-text {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: var(--e2-dark);
 }
 
 /* === RESPONSIVE CONTAINER === */
@@ -112,51 +76,10 @@ section h2 {
 @media (max-width: 480px) {
   .container {
     max-width: 420px;
-    padding: 0 16px;
   }
 }
 
-/* === LAYOUT === */
-.section {
-  padding: 5rem 0;
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: 3rem 0;
-  }
-}
-
-.section-light {
-  background: var(--e2-white);
-}
-
-.section-grey {
-  background: var(--e2-light);
-}
-
-.section-blue {
-  background: var(--e2-blue);
-  color: var(--e2-white);
-}
-
-/* Dark bands readability */
-#compliance,
-#integrators {
-  background: var(--e2-blue) !important;
-  color: #fff !important;
-}
-
-#compliance h2,
-#integrators h2,
-#compliance p,
-#integrators p,
-#compliance li,
-#integrators li {
-  color: #fff !important;
-}
-
-/* === GRID RESPONSIVE === */
+/* === RESPONSIVE GRID === */
 .grid {
   display: grid;
   gap: 24px;
@@ -202,6 +125,82 @@ section h2 {
 .carousel-row::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+/* === DARK SECTIONS === */
+#compliance,
+#integrators {
+  background: #2d4a8f !important;
+  color: #fff !important;
+}
+
+#compliance h2,
+#integrators h2,
+#compliance p,
+#integrators p,
+#compliance li,
+#integrators li {
+  color: #fff !important;
+}
+
+/* === TYPOGRAPHY === */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--e2-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--e2-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--e2-dark);
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--e2-dark);
+}
+
+/* === LAYOUT === */
+.section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+}
+
+.section-light {
+  background: var(--e2-white);
+}
+
+.section-grey {
+  background: var(--e2-light);
+}
+
+.section-blue {
+  background: var(--e2-blue);
+  color: var(--e2-white);
 }
 
 /* === HEADER === */
@@ -563,11 +562,6 @@ section h2 {
 .mb-0 { margin-bottom: 0 !important; }
 .mb-2 { margin-bottom: 1rem !important; }
 .mb-4 { margin-bottom: 2rem !important; }
-
-/* Remove pink backgrounds globally */
-* {
-  background-image: none !important;
-}
 
 /* Smooth scrolling */
 html {
