@@ -52,21 +52,7 @@ export const content = {
     // How It Works
     howItWorks: {
       title: 'How E2-Care Works',
-      subtitle: 'Simple 3-step process connecting sensors to insights',
-      steps: [
-        {
-          title: 'Sensors',
-          description: 'BLE and calibrated sensors collect real-time data'
-        },
-        {
-          title: 'Relay',
-          description: 'LTE/NB-IoT/Wi-Fi connectivity ensures reliable transmission'
-        },
-        {
-          title: 'Cloud Dashboard',
-          description: 'Alerts, reports, and API integration for actionable insights'
-        }
-      ]
+      description: 'Install the sensors in a few minutes → data appears live in your dashboard → our AI layer handles the rest: trend detection (health risk patterns), fall-down alerts, reminders (medication), and smart communication with caregivers and family.'
     },
     
     // Compliance & Security
