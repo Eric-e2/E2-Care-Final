@@ -1,15 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
-const Hero = ({ language }) => {
-  const t = content[language];
-  
-  const handleDownloadPdf = () => {
-    const pdfName = language === 'en' ? 'E2-Care_1pager_EN.pdf' : 'E2-Care_1pager_FR.pdf';
-    console.log(`Downloading ${pdfName}`);
-    // In production: window.open(`/assets/pdf/${pdfName}`);
-  };
+const Hero = () => {
+  const { language } = useLanguage();
+  const t = content[language].hero;
   
   return (
     <section className="hero">
