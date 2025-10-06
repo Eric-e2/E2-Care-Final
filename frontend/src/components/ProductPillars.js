@@ -67,8 +67,8 @@ const ProductPillars = ({ language }) => {
                   <div className="mb-6">
                     <ul className="space-y-2">
                       {pillar.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-dark-grey">
-                          <div className="w-1.5 h-1.5 bg-coral rounded-full mr-3 flex-shrink-0"></div>
+                        <li key={featureIndex} className="flex items-center text-sm text-e2-dark">
+                          <div className="w-1.5 h-1.5 bg-e2-coral rounded-full mr-3 flex-shrink-0"></div>
                           {feature}
                         </li>
                       ))}
