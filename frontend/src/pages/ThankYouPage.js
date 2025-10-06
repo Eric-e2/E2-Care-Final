@@ -6,14 +6,21 @@ import Footer from '../components/Footer';
 const ThankYouPage = () => {
   const { language } = useLanguage();
   
+  // Load TidyCal script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const handlePdfDownload = () => {
     const pdfName = language === 'en' ? 'E2-Care_1pager_EN.pdf' : 'E2-Care_1pager_FR.pdf';
-    console.log(`Downloading ${pdfName}`);
-    // In production: window.open(`/assets/pdf/${pdfName}`);
-  };
-  
-  const handleTidyCalOpen = () => {
-    window.open('https://tidycal.com/ericbrisset/30-minute-meeting', '_blank');
+    window.open(`/assets/pdf/${pdfName}`, '_blank');
   };
   
   return (
