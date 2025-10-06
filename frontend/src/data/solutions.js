@@ -59,6 +59,21 @@ export const solutionsContent = {
       ],
       miniCase: 'FR flats: voice-AI reminders improved adherence; families report higher peace of mind.',
       cta: 'Book a Demo'
+    },
+    'integrators': {
+      title: 'E2-Integrators & Local Partners',
+      problem: 'Healthcare technology adoption varies by region, requiring local expertise, language support, and regulatory knowledge.',
+      solution: 'Comprehensive partner program with white-label solutions, complete training, API access, and shared revenue models for regional deployment.',
+      benefits: [
+        'White-label dashboard and branding',
+        'Complete training and certification',
+        'API access and technical support',
+        'Shared revenue model (25-50%)',
+        'Local customer ownership',
+        'Early access to new features'
+      ],
+      miniCase: 'Baltic partners: 3 JV agreements signed in 6 months, generating €200k+ recurring revenue with 40% partner share.',
+      cta: 'Join Partner Program'
     }
   },
   
