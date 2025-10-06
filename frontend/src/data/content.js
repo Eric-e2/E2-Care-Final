@@ -260,6 +260,11 @@ export const content = {
           title: 'Appareils Connectés Seniors',
           description: 'Montres, piluliers, assistance vocal-IA. Multilingue, prêt urgence avec ROI rapide.',
           features: ['Support multilingue', 'Réponse d\'urgence', 'ROI rapide']
+        },
+        {
+          title: 'E2-Intégrateurs & Partenaires Locaux',
+          description: 'Déployez les solutions E2 dans votre région via notre programme Partenaires & JV. Tableau de bord marque blanche, accès API, formation, et modèle de revenus partagé.',
+          features: ['Dashboard marque blanche', 'Accès API & formation', 'Modèle revenus partagé']
         }
       ],
       cta: 'En savoir plus'
