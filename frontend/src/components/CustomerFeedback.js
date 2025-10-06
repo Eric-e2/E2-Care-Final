@@ -62,12 +62,21 @@ const CustomerFeedback = ({ language }) => {
           <div className="overflow-hidden rounded-2xl">
             <div 
               className="flex transition-transform duration-500 ease-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              style={{ 
+                transform: `translateX(-${currentIndex * 100}%)`,
+                gap: '24px'
+              }}
+              onMouseEnter={() => setIsAutoPlaying(false)}
+              onMouseLeave={() => setIsAutoPlaying(true)}
             >
               
               {t.feedback.testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0" style={{ padding: '0 12px' }}>
-                  <Card className="bg-e2-white border-none shadow-soft mx-auto max-w-2xl rounded-xl overflow-hidden">
+                <div 
+                  key={index} 
+                  className="w-full flex-shrink-0" 
+                  style={{ minWidth: 'calc(100% - 24px)', marginRight: '24px' }}
+                >
+                  <Card className="bg-e2-white border-none shadow-soft mx-auto max-w-2xl rounded-xl overflow-hidden hover:shadow-elevated transition-all duration-300">
                     <CardContent className="p-8 text-center">
                       
                       {/* Location Badge */}
@@ -77,12 +86,12 @@ const CustomerFeedback = ({ language }) => {
                       </div>
                       
                       {/* Result */}
-                      <h3 className="heading-2 text-e2-blue mb-4 font-semibold">
+                      <h3 className="heading-2 text-e2-blue mb-4 font-semibold leading-tight">
                         {testimonial.result}
                       </h3>
                       
                       {/* Impact */}
-                      <div className="flex items-center justify-center bg-e2-blue/5 text-e2-blue px-6 py-3 rounded-2xl">
+                      <div className="flex items-center justify-center bg-e2-blue/10 text-e2-blue px-6 py-3 rounded-2xl">
                         <TrendingUp className="w-5 h-5 mr-2" />
                         <span className="body-medium font-medium">{testimonial.impact}</span>
                       </div>
