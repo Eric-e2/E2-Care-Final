@@ -156,33 +156,29 @@ const SolutionPage = () => {
       </section>
       
       {/* Final CTA Band */}
-      <section className="section section-blue">
-        <div className="container text-center">
+      <section id="final-cta" className="section">
+        <div className="container" style={{ textAlign: 'center' }}>
           <h2 className="section-title">
             {language === 'en' ? 'Start Your Pilot Today' : 'Lancez Votre Pilote Aujourd\'hui'}
           </h2>
-          <p className="section-subtitle" style={{ color: 'white !important' }}>
+          <p className="section-subtitle">
             {language === 'en'
               ? 'Join hundreds of organizations already using E2-Care to improve safety and efficiency.'
               : 'Rejoignez des centaines d\'organisations utilisant déjà E2-Care pour améliorer sécurité et efficacité.'
             }
           </p>
-          <div className="hero-buttons">
-            <Link to={`/${language}/thank-you`} className="btn btn-primary">
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href={`/${language}/thank-you`} className="btn btn-primary">
               {language === 'en' ? 'Start a Pilot' : 'Lancer un Pilote'}
-            </Link>
-            <a href="mailto:contact@e2.dev" className="btn" style={{
-              background: 'transparent',
-              color: 'white',
-              border: '2px solid white'
-            }}>
+            </a>
+            <a href="mailto:contact@e2.dev" className="btn btn-secondary">
               {language === 'en' ? 'Contact Sales' : 'Contacter Ventes'}
             </a>
           </div>
         </div>
       </section>
       
-      <Footer language={language} />
+      <Footer />
     </div>
   );
 };
